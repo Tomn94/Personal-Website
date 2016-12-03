@@ -29,6 +29,9 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="256" />
     <meta property="og:image:height" content="256" />
+    
+    <?php /* External */ ?>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:b" rel="stylesheet">
   </head>
   <body>
       <header>
@@ -67,5 +70,14 @@
               </tr>
           </table>
       </header>
+      
+      <section id="skills">
+          <h1>Skills</h1>
+          <div>iOS SDK</div>
+      </section>
+      
+      <section id="projects">
+          <h1>Projects</h1>
+      </section>
   </body>
 </html>
