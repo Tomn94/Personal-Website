@@ -73,11 +73,29 @@
       
       <section id="skills">
           <h1>Skills</h1>
+          
           <div>iOS SDK</div>
       </section>
       
       <section id="projects">
-          <h1>Projects</h1>
+          <h1 class="letterpress">Projects</h1>
+          
+          <table>
+              <tr>
+                  <td>
+                    <img src="https://github.com/Tomn94/BDE-ESEO/blob/ESEOasis/Captures%20App%20Store/iPad/4.png?raw=true" title="" />
+                    <br>
+                    <h2>Test</h2>
+                    <p>Description</p>
+                    <a href="">View on the App Store <span>›</span></a>
+                    <a href="">View on GitHub <span>›</span></a>
+                  </td>
+              </tr>
+          </table>
       </section>
+      
+      <footer class="letterpress">&copy; 2016<br>
+          Everything here is home-made except the fonts
+      </footer>
   </body>
 </html>

@@ -16,6 +16,14 @@ table {
     max-width: 1100px;
 }
 
+body {
+    background: url('../img/bg.png');
+}
+
+.letterpress {
+    text-shadow: 0px 1px 0px white;/*, 0px -1px 0px rgba(0,0,0,0.42);*/
+}
+
 /* HEADER */
 
 .altTitleColor {
@@ -161,6 +169,7 @@ header td, th {
 #skills h1, #projects h1 {
     font-family: 'SFMono-Heavy', 'SF Mono', 'Inconsolata', Monaco, 'Lucida Console', monospace;
     font-weight: bolder;
+    font-size: 2em;
 }
 
 #skills h1 {
@@ -168,6 +177,66 @@ header td, th {
     text-shadow: 0px 0px 30px black;
 }
 
+
+/* PROJECTS */
+
 #projects h1 {
-    color: #FF5817;
+    color: #FF4260;
+    padding-top: 5px;
+    padding-bottom: 40px;
+}
+
+#projects h2 {
+    font-weight: bold;
+    color: #383835;
+}
+
+#projects p {
+    color: #747474;
+    font-weight: 400;
+    padding: 20px 0px;
+}
+
+#projects a {
+    display: block;
+    text-decoration: none;
+    color: #A2A2A2;
+    padding-bottom: 5px;
+}
+
+#projects a span {
+    position: relative;
+    left: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+#projects a:hover span {
+    left: 7px;
+}
+
+#projects a:hover {
+    color: #777;
+}
+
+#projects img {
+    margin-right: 40px;
+    float: left;
+    max-width: 60%;
+    box-shadow: 0px 0px 15px #777;
+    transition: 0.4s box-shadow ease-out;
+    border-radius: 4px;
+}
+
+#projects img:hover {
+    box-shadow: 0px 0px 30px #777;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 10px 0px;
+    text-align: center;
+    color: #A2A2A2;
+    font-size: 0.8em;
 }
