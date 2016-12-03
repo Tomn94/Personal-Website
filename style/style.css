@@ -1,15 +1,51 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica", Arial, sans-serif;
+    font-family: system, -apple-system, BlinkMacSystemFont,
+      "Helvetica Neue", "Lucida Grande", "Roboto", "Ubuntu", Arial, sans-serif;
     font-weight: 300;
 }
 
+strong {
+    font-weight: 600;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* HEADER */
+
+.altTitleColor {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+@-webkit-keyframes SlideBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes SlideBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes SlideBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 header {
+    padding: 15px 0px 10px 0px;
     text-align: center;
     color: white;
     background-color: #FF4260;
-    padding: 15px 0px 10px 0px;
+    background: -webkit-linear-gradient(-18deg, #FF3431 0%, #FFBD41 8.3%, #8FCB3F 16.6%, #00E5FF 25%, #3277FF 33.3%, #FB67FF 41.6%, #FF3431 50%, #FFBD41 58.3%, #8FCB3F 66.6%, #00E5FF 75%, #3277FF 83.3%, #FB67FF 91.6%, #FF3431 100%);
+    background-size: 1000% 200%;
+    animation: SlideBG 180s linear infinite;
 }
 
 header h1 {
@@ -17,67 +53,74 @@ header h1 {
     font-weight: 800;
 }
 
-.altTitleColor {
-    color: rgba(255, 225, 224, 0.8);
-}
-
 header h2 {
+    margin-top: 11px;
     font-size: 1.2em;
     font-weight: 600;
-    margin-top: 11px;
-}
-
-strong {
-    font-weight: 600;
-}
-
-.button {
-    --button-text-color: red;
-    position: relative;
-    top: 0;
-    display: inline-block;
-    margin: 5px 8px;
-    padding: 9px 20px 8px 20px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.92);
-    border: none;
-    color: var(--button-text-color);
-    font-size: 1.25em;
-    height: 25px;
-    width: 110px;
-    transition: 0.2s all ease-in-out;
-    cursor: pointer;
-}
-
-.button:hover {
-    box-shadow: 0px 1px 8px white;
-    top: -4px;
-    background: white;
-}
-
-.button:active {
-    background: var(--button-text-color);
-    color: white;
-}
-
-table {
-    margin: auto;
-    width: 100%;
 }
 
 header nav {
     margin: 20px 0px;
 }
 
-header td, th {
-    padding: 5px 20px;
-    line-height: 25px;
-    min-width: 210px;
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    margin: 5px 8px;
+    padding: 9px 20px 8px 20px;
+    height: 25px;
+    width: 110px;
+    position: relative;
+    top: 0;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #FF4260;
+    font-size: 1.25em;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: 0.2s all ease-in-out;
 }
 
-/**header th {
-    font-weight: 500;
-}*/
+.button:hover {
+    top: -4px;
+    box-shadow: 0px 1px 8px white;
+    background: white;
+}
+
+.button:active {
+    top: 0px;
+    background: #FF4260;
+    color: white;
+}
+
+.button .slash {
+    display: inline-block;
+    height: 105%;
+    width: 1px;
+    position: absolute;
+    top: -1px;
+    background: #FF4260;
+    transform: rotate(18deg);
+    transition: 0.2s background ease-in-out;
+}
+
+.button:active .slash {
+    background: white;
+}
+
+/* HEADER INFOS */
+
+header td, th {
+    min-width: 210px;
+    padding: 5px 20px;
+    line-height: 25px;
+}
 
 .flags {
     font-size: 1.8em;
@@ -88,5 +131,5 @@ header td, th {
     position: relative;
     left: 67px;
     font-size: 0.7em;
-    color: rgba(255, 255, 255, 0.42);
+    color: rgba(255, 255, 255, 0.75);
 }

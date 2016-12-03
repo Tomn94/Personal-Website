@@ -37,9 +37,9 @@
               Polyglot Developer, Designer…</h2>
               
           <nav>
-              <a class="button">Mail</a>
-              <a class="button">CV&nbsp;&nbsp;Résumé</a>
-              <a class="button">LinkedIn</a>
+              <a class="button" href="mailto:t%6d%6E%73%74%75%64%69%6Fs%40%68%6ft%6d%61%69%6C%2e%66%72">Mail</a>
+              <a class="button" href="Thomas-Naudet-CV.pdf">CV&nbsp;<span class="slash"></span>&nbsp;&nbsp;Résumé</a>
+              <a class="button" href="https://linkedin.com/in/tomn94">LinkedIn</a>
           </nav>
           
           <table>
@@ -61,8 +61,8 @@
                       🇻🇳🇲🇲🇹🇭🇰🇭🇲🇴🇲🇦</td>
               </tr>
               <tr>
-                  <td><a class="button">Twitter</a></td>
-                  <td><a class="button">GitHub</a></td>
+                  <td><a class="button" href="https://twitter.com/tomn94">Twitter</a></td>
+                  <td><a class="button" href="https://github.com/Tomn94">GitHub</a></td>
                   <td></td>
               </tr>
           </table>
