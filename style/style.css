@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica", Arial, sans-serif;
+    font-weight: 300;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: #FF4260;
+    padding: 15px 0px 10px 0px;
+}
+
+header h1 {
+    font-size: 3.4em;
+    font-weight: 800;
+}
+
+.altTitleColor {
+    color: rgba(255, 225, 224, 0.8);
+}
+
+header h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 11px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.button {
+    --button-text-color: red;
+    position: relative;
+    top: 0;
+    display: inline-block;
+    margin: 5px 8px;
+    padding: 9px 20px 8px 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.92);
+    border: none;
+    color: var(--button-text-color);
+    font-size: 1.25em;
+    height: 25px;
+    width: 110px;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0px 1px 8px white;
+    top: -4px;
+    background: white;
+}
+
+.button:active {
+    background: var(--button-text-color);
+    color: white;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+}
+
+header nav {
+    margin: 20px 0px;
+}
+
+header td, th {
+    padding: 5px 20px;
+    line-height: 25px;
+    min-width: 210px;
+}
+
+/**header th {
+    font-weight: 500;
+}*/
+
+.flags {
+    font-size: 1.8em;
+    line-height: 30px;
+}
+
+.gitnote {
+    position: relative;
+    left: 67px;
+    font-size: 0.7em;
+    color: rgba(255, 255, 255, 0.42);
+}
