@@ -100,14 +100,14 @@ $PROJECTS =
     "// Deprecated projects",
     
     [
+        ["title"   => "uSurf",
+         "details" => "Ultra customizable and cross-platform browser with a modern user interface (CoverFlow history, animations…).<br>Based on Webkit, respects Internet standards and, consistent with each OS.",
+         "imgs"    => ["img/projects/usurf.jpg"],
+         "links"   => []],
+         
         ["title"   => "∞Crypt",
          "details" => "Encrypt & decrypt your texts and files with secure algorithms, in an innovative way thanks to plug-ins.<br>∞Crypt Text & ∞Crypt Files are cross-platform desktop apps.",
          "imgs"    => ["img/projects/infinicrypttext.png", "img/projects/infinicryptfiles.png"],
-         "links"   => []],
-         
-        ["title"   => "DevCrew",
-         "details" => "Website for a team of developers I was a member.",
-         "imgs"    => ["img/projects/devcrew.jpg"],
          "links"   => []],
          
         ["title"   => "Tunnel Runners",
@@ -122,14 +122,14 @@ $PROJECTS =
     ],
     
     [
-        ["title"   => "uSurf",
-         "details" => "Ultra customizable and cross-platform browser with a modern user interface (CoverFlow history, animations…).<br>Based on Webkit, respects Internet standards and, consistent with each OS.",
-         "imgs"    => ["img/projects/usurf.jpg"],
-         "links"   => []],
-         
         ["title"   => "Network Chat",
          "details" => "Client & server multi-platform chat on a local network.<br>Inconspicuous user interface, file transferts, chat commands…",
          "imgs"    => ["img/projects/netchat.png"],
+         "links"   => []],
+         
+        ["title"   => "DevCrew",
+         "details" => "Website for a team of developers I was a member.",
+         "imgs"    => ["img/projects/devcrew.jpg"],
          "links"   => []],
          
         ["title"   => "DelDots",

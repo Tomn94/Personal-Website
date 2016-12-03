@@ -88,16 +88,17 @@
                   <?php
                     foreach ($projectsRow as $project) {
                        echo (count($projectsRow) == 1) ? '<td class="large">' : '<td>';
-                       if (strpos($project["imgs"][0], '.mp4') !== false) {
+                       foreach ($project["imgs"] as $img) {
+                          if (strpos($img, '.mp4') !== false) {
                   ?>
                   <video autoplay loop>
-                    <source src="<?php echo $project["imgs"][0]; ?>" type="video/mp4" />
+                    <source src="<?php echo $img; ?>" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   <?php
-                       } else {
+                          } else {
                   ?>
-                    <img src="<?php echo $project["imgs"][0]; ?>" title="<?php echo $project["title"]; if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;'; ?>" /><?php } ?>
+                    <img src="<?php echo $img; ?>" title="<?php echo $project["title"]; if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;'; ?>" /><?php } } ?>
                     <br>
                     <h2><?php echo $project["title"]; ?></h2>
                     <p><?php echo $project["details"]; ?></p>
