@@ -1,7 +1,5 @@
 <?php
-  
-  $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
-  $PAGE_TITLE_SHORT = "Thomas Naudet";
+  include('data.php');
 ?>
 
 <!DOCTYPE html>
@@ -80,18 +78,45 @@
       <section id="projects">
           <h1 class="letterpress">Projects</h1>
           
+<?php
+            if (isset($PROJECTS)) {
+                foreach ($PROJECTS as $projectsRow) {
+                    if (is_array($projectsRow)) {
+                    ?>
           <table>
               <tr>
-                  <td>
-                    <img src="https://github.com/Tomn94/BDE-ESEO/blob/ESEOasis/Captures%20App%20Store/iPad/4.png?raw=true" title="" />
+                  <?php
+                    foreach ($projectsRow as $project) {
+                       echo (count($projectsRow) == 1) ? '<td class="large">' : '<td>';
+                       if (strpos($project["imgs"][0], '.mp4') !== false) {
+                  ?>
+                  <video autoplay loop>
+                    <source src="<?php echo $project["imgs"][0]; ?>" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <?php
+                       } else {
+                  ?>
+                    <img src="<?php echo $project["imgs"][0]; ?>" title="<?php echo $project["title"]; if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;'; ?>" /><?php } ?>
                     <br>
-                    <h2>Test</h2>
-                    <p>Description</p>
-                    <a href="">View on the App Store <span>›</span></a>
-                    <a href="">View on GitHub <span>›</span></a>
+                    <h2><?php echo $project["title"]; ?></h2>
+                    <p><?php echo $project["details"]; ?></p>
+                    <?php
+                        foreach ($project["links"] as $linkInfo) {
+                    ?>
+                    <a href="<?php echo $linkInfo[1]; ?>"><?php echo $linkInfo[0]; ?>&nbsp;<span>›</span></a>
+                    <?php } ?>
                   </td>
+                  <?php } ?>
               </tr>
           </table>
+                   <?php
+                    } else {
+                        echo "<h3 class='letterpress'>".$projectsRow."</h3>";
+                    }
+                }
+            }
+          ?>
       </section>
       
       <footer class="letterpress">&copy; 2016<br>
