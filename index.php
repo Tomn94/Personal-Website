@@ -7,6 +7,7 @@
   <head>
     <meta charset="utf-8">
     <title><?php echo $PAGE_TITLE; ?></title>
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style/style.css">
     <script src="scripts/script.js"></script>
     
@@ -87,18 +88,32 @@
               <tr>
                   <?php
                     foreach ($projectsRow as $project) {
-                       echo (count($projectsRow) == 1) ? '<td class="large">' : '<td>';
+                       echo '<td';
+                       if (count($projectsRow) == 1 || (isset($project["inline"]) && $project["inline"])) {
+                           echo ' class="';
+                           if (count($projectsRow) == 1) echo "large ";
+                           if (isset($project["inline"]) && $project["inline"]) echo "stayInline ";
+                           echo '"';
+                       }
+                       echo '>';
                        foreach ($project["imgs"] as $img) {
                           if (strpos($img, '.mp4') !== false) {
                   ?>
-                  <video autoplay loop>
+                  <video muted loop autoplay playsinline>
                     <source src="<?php echo $img; ?>" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   <?php
                           } else {
                   ?>
-                    <img src="<?php echo $img; ?>" title="<?php echo $project["title"]; if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;'; ?>" /><?php } } ?>
+                    <img src="<?php echo $img; ?>" title="<?php
+                        echo $project["title"];
+                        if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;';
+                        if ($project["title"] == 'DigiSheep') echo '" style="max-width: 37%;';
+                        ?>" /><?php
+                          }
+                       } ?>
+                       
                     <br>
                     <h2><?php echo $project["title"]; ?></h2>
                     <p><?php echo $project["details"]; ?></p>

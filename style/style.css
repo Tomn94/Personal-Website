@@ -6,6 +6,11 @@
     font-weight: 300;
 }
 
+body {
+    background: url('../img/bg.png');
+    min-width: 560px;
+}
+
 strong {
     font-weight: 600;
 }
@@ -15,15 +20,6 @@ table {
     width: 99%;
     max-width: 1100px;
     table-layout: fixed;
-}
-
-table td {
-    vertical-align: top;
-}
-
-body {
-    background: url('../img/bg.png');
-    min-width: 740px;
 }
 
 .letterpress {
@@ -197,6 +193,7 @@ header td, th {
 
 #projects td {
     padding: 0px 15px 50px 15px;
+    vertical-align: top;
 }
 
 #projects h1 {
@@ -212,18 +209,14 @@ header td, th {
 
 #projects h3 {
     color: #888;
-    padding: 20px 0 40px 0;
-    font-size: 1.3em;
+    padding: 60px 0 40px 0;
+    font-size: 1.5em;
 }
 
 #projects p {
     color: #747474;
     font-weight: 400;
-    padding: 10px 0px;
-}
-
-#projects td.large p {
-    padding: 20px 0px;
+    padding: 10px 0;
 }
 
 #projects a {
@@ -231,6 +224,8 @@ header td, th {
     text-decoration: none;
     color: #A2A2A2;
     padding-bottom: 5px;
+    text-shadow: 0 1px 0 white;
+    font-weight: 400;
 }
 
 #projects a span {
@@ -255,11 +250,20 @@ header td, th {
     transition: 0.4s box-shadow ease-out;
     border-radius: 5px;
     margin-bottom: 10px;
-    clear: left;
+    white-space: none;
 }
 
 #projects img:hover, #projects video:hover {
     box-shadow: 0px 0px 30px #555;
+}
+
+#projects td.large p {
+    padding: 20px 0;
+}
+
+#projects td.large p, #projects td.large a {
+    margin-left: 60%;
+    padding-left: 40px;
 }
 
 #projects td.large img, #projects td.large video {
@@ -278,4 +282,26 @@ footer {
     text-align: center;
     color: #A2A2A2;
     font-size: 0.8em;
+}
+
+@media only screen and (max-width: 800px) {
+    td, th {
+        display: block;
+    }
+    
+    .stayInline {
+        display: inline-block;
+        width: 42%;
+    }
+    
+    #projects td.large p {
+        padding: 10px 0;
+    }
+
+    #projects td.large img, #projects td.large video {
+        margin-bottom: 10px;
+        float: none;
+        max-width: 100%;
+        max-height: 400px;
+    }
 }
