@@ -129,6 +129,14 @@ header nav {
 .button:active .slash {
     background: white;
 }
+    
+header td .hiddenButtons { 
+    display: none;
+}
+    
+header .standardButtons {
+    display: table-row;
+}
 
 /* HEADER INFOS */
 
@@ -284,9 +292,31 @@ footer {
     font-size: 0.8em;
 }
 
-@media only screen and (max-width: 800px) {
+
+/* MOBILE */
+@media only screen and (max-width: 735px) {
     td, th {
         display: block;
+    }
+    
+    header th {
+        display: none;
+    }
+    
+    header td:before { 
+        content: attr(data-th);
+        display: block;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 16px;
+        padding-top: 10px;
+    }
+    
+    header td .hiddenButtons { 
+        display: block;
+    }
+    
+    header .standardButtons {
+        display: none;
     }
     
     .stayInline {
@@ -296,6 +326,11 @@ footer {
     
     #projects td.large p {
         padding: 10px 0;
+    }
+
+    #projects td.large p, #projects td.large a {
+        margin-left: 0;
+        padding-left: 0;
     }
 
     #projects td.large img, #projects td.large video {

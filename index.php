@@ -46,25 +46,35 @@
           
           <table>
               <tr class="altTitleColor">
-                  <th>last song I've listened to</th>
-                  <th>GitHub activity</th>
-                  <th>countries I've lived in/visited</th>
+                  <?php foreach ($HEADER_TABLE_HEADERS as $header) { ?>
+                      <th><?php echo $header; ?></th>
+                  <?php } ?>
               </tr>
               <tr>
-                  <td>I Feel It Coming<br>
-                      <strong>The Weeknd</strong></td>
-                  <td><strong>14</strong> repositories<br>
+                  <td data-th="<?php echo $HEADER_TABLE_HEADERS[0]; ?>">
+                      I Feel It Coming<br>
+                      <strong>The Weeknd</strong>
+                      
+                      <div class="hiddenButtons">
+                          <?php echo $HEADER_BUTTONS[0]; ?>
+                      </div>
+                  </td>
+                  <td data-th="<?php echo $HEADER_TABLE_HEADERS[1]; ?>">
+                      <strong>14</strong> repositories<br>
                       last commit <strong>3 hours ago</strong><br>
                       <strong>409</strong> contributions this year<br>
+                      
                       <span class="gitnote">+ BitBucket</span>
+                      
+                      <div class="hiddenButtons">
+                          <?php echo $HEADER_BUTTONS[1]; ?>
+                      </div>
                   </td>
-                  <td class="flags">🇫🇷🇭🇰🇬🇧🇮🇪🇩🇪🇨🇳<br>
-                      🇨🇿🇧🇪🇱🇺🇮🇹🇬🇷<br>
-                      🇻🇳🇲🇲🇹🇭🇰🇭🇲🇴🇲🇦</td>
+                  <td data-th="<?php echo $HEADER_TABLE_HEADERS[2]; ?>" class="flags"><?php echo nl2br($COUNTRIES); ?></td>
               </tr>
-              <tr>
-                  <td><a class="button" href="https://twitter.com/tomn94">Twitter</a></td>
-                  <td><a class="button" href="https://github.com/Tomn94">GitHub</a></td>
+              <tr class="standardButtons">
+                  <td><?php echo $HEADER_BUTTONS[0]; ?></td>
+                  <td><?php echo $HEADER_BUTTONS[1]; ?></td>
                   <td></td>
               </tr>
           </table>
@@ -109,7 +119,7 @@
                     <img src="<?php echo $img; ?>" title="<?php
                         echo $project["title"];
                         if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;';
-                        if ($project["title"] == 'DigiSheep') echo '" style="max-width: 37%;';
+                        if ($project["title"] == 'DigiSheep') echo '" style="max-width: 36%;';
                         ?>" /><?php
                           }
                        } ?>

@@ -3,6 +3,11 @@
 $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
 
+$HEADER_TABLE_HEADERS = ["last song I've listened to", "GitHub activity", "countries I've lived in/visited"];
+
+$HEADER_BUTTONS = ['<a class="button" href="https://twitter.com/tomn94">Twitter</a>', '<a class="button" href="https://github.com/Tomn94">GitHub</a>'];
+
+$COUNTRIES = "🇫🇷🇭🇰🇬🇧🇮🇪🇩🇪🇨🇳\n🇨🇿🇧🇪🇱🇺🇮🇹🇬🇷\n🇻🇳🇲🇲🇹🇭🇰🇭🇲🇴🇲🇦";
 
 $PROJECTS =
 [
