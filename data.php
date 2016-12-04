@@ -2,6 +2,9 @@
     
 $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
+$DESCRIPTION = "French Student Engineer+Manager\nPolyglot Developer, Designer…";
+
+$BASE_URL = "http://tomn.tramigoapp.com";
 
 $HEADER_TABLE_HEADERS = ["last song I've listened to", "GitHub activity", "countries I've lived in/visited"];
 

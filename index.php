@@ -23,11 +23,15 @@
     <link color="#F1783D" href="favicon.svg" rel="mask-icon">
     
     <?php /* Bots integration */ ?>
-    <meta property="og:title" content="<?php echo $PAGE_TITLE; ?>" />
-    <meta property="og:image" content="favicon.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="256" />
-    <meta property="og:image:height" content="256" />
+    <meta property="og:title" content="<?php echo $PAGE_TITLE_SHORT; ?>" />
+    <meta property="og:description" content="<?php echo str_replace("\n", '. ', $DESCRIPTION); ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<?php echo $BASE_URL; ?>/img/avatar.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="442" />
+    <meta property="og:image:height" content="442" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@tomn94" />
     
     <?php /* External */ ?>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:b" rel="stylesheet">
@@ -35,8 +39,7 @@
   <body>
       <header>
           <h1>Thomas Naudet</h1>
-          <h2 class="altTitleColor">French Student Engineer+Manager<br>
-              Polyglot Developer, Designer…</h2>
+          <h2 class="altTitleColor"><?php echo nl2br($DESCRIPTION); ?></h2>
               
           <nav>
               <a class="button" href="mailto:t%6d%6E%73%74%75%64%69%6Fs%40%68%6ft%6d%61%69%6C%2e%66%72">Mail</a>
