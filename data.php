@@ -1,5 +1,7 @@
 <?php
-    
+
+$DATE_LAST_CHANGE = "December 2016";
+
 $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
 $DESCRIPTION = "French Student Engineer+Manager\nPolyglot Developer, Designer…";
@@ -16,7 +18,7 @@ $PROJECTS =
 [
     [
         ["title"   => "Tramigo",
-         "details" => "Always know when you can catch the next tram/subway/bus, you can't be late.<br>Tramigo shows you the schedule at the closest stop, in the city you are currently located. Many other features…<br>&nbsp;<br>Top app in Angers, France.",
+         "details" => "Know instantly when is your next tram/subway/bus: you can't be late.<br>&nbsp;<br>Tramigo shows you the schedule at the closest stop, in the city you are currently located. Also features lines, maps and timetables.<br>&nbsp;<br>Top app in Angers, France.",
          "imgs"    => ["img/projects/tramigo.png"],
          "links"   => [["Visit website", "http://tramigoapp.com"],
                        ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8"],

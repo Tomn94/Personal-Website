@@ -11,7 +11,7 @@ body {
     min-width: 560px;
 }
 
-strong {
+strong, header span[id|="gh"] {
     font-weight: 600;
 }
 
@@ -91,7 +91,7 @@ header nav {
     top: 0;
     border: none;
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.8);
     color: #FF4260;
     font-size: 1.25em;
     text-decoration: none;
@@ -153,7 +153,8 @@ header td, th {
 
 .gitnote {
     position: relative;
-    left: 67px;
+    left: 46px;
+    top: 5px;
     font-size: 0.7em;
     color: rgba(255, 255, 255, 0.75);
 }
@@ -261,7 +262,7 @@ header td, th {
     white-space: none;
 }
 
-#projects img:hover, #projects video:hover {
+#projects td:hover img, #projects td:hover video {
     box-shadow: 0px 0px 30px #555;
 }
 

@@ -63,9 +63,9 @@
                       </div>
                   </td>
                   <td data-th="<?php echo $HEADER_TABLE_HEADERS[1]; ?>">
-                      <strong>14</strong> repositories<br>
-                      last commit <strong>3 hours ago</strong><br>
-                      <strong>409</strong> contributions this year<br>
+                      <span id="gh-repos">14+</span> repositories<br>
+                      last commit <span id="gh-commit-time">some time ago</span><br>
+                      <span id="gh-contributions">So many</span> contributions this year<br>
                       
                       <span class="gitnote">+ BitBucket</span>
                       
@@ -148,7 +148,7 @@
           ?>
       </section>
       
-      <footer class="letterpress">&copy; 2016<br>
+      <footer class="letterpress">&copy; <?php echo $DATE_LAST_CHANGE; ?><br>
           Everything here is home-made except the fonts
       </footer>
   </body>
