@@ -55,8 +55,8 @@
               </tr>
               <tr>
                   <td data-th="<?php echo $HEADER_TABLE_HEADERS[0]; ?>">
-                      I Feel It Coming<br>
-                      <strong>The Weeknd</strong>
+                      <span id="tw-name" style="font-weight: 300;">Young Blood</span><br>
+                      <span id="tw-artist">The Naked and Famous</strong>
                       
                       <div class="hiddenButtons">
                           <?php echo $HEADER_BUTTONS[0]; ?>

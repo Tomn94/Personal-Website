@@ -24,6 +24,7 @@ var onScroll = function(evt) {
 
 window.addEventListener("scroll", onScroll);
 
+
 /* GITHUB */
 
 /* Repositories & Commits */
@@ -78,3 +79,19 @@ http2.onreadystatechange = function() {
     }
 }
 http2.send();
+
+
+/* TWITTER */
+var http3 = new XMLHttpRequest();
+http3.open('GET', 'twitter.php', true);
+http3.onreadystatechange = function() {
+    if (http3.readyState == 4 && http3.status == 200) {
+        var data = http3.responseText;
+        if (data != "") {
+            var json = JSON.parse(data);
+            document.getElementById("tw-name").textContent = json['name'];
+            document.getElementById("tw-artist").textContent = json['artist'];
+        }
+    }
+}
+http3.send();

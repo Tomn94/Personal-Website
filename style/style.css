@@ -11,7 +11,7 @@ body {
     min-width: 560px;
 }
 
-strong, header span[id|="gh"] {
+strong, header span[id|="gh"], header span[id|="tw"] {
     font-weight: 600;
 }
 
