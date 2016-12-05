@@ -95,3 +95,31 @@ http3.onreadystatechange = function() {
     }
 }
 http3.send();
+
+
+/* PAINTINGS */
+/* Init */
+var currentPaintIndex = 0;
+var lastPaintChange = 0;    // time last pic change occured
+
+/* Define behavior of the carousel */
+function changePainting() {
+    var paintings = document.getElementsByName("painting");
+    var currentTime = (new Date()).getTime();
+    
+    /* HTML loaded and not clicked just before */
+    if (paintings.length > 0 && (currentTime - lastPaintChange) / 1000 > 1) {
+        /* Change pic */
+        paintings[currentPaintIndex].style.opacity = "0";
+        currentPaintIndex = (currentPaintIndex + 1) % paintings.length;
+        paintings[currentPaintIndex].style.opacity = "1";
+        
+        /* Reset time */
+        lastPaintChange = currentTime;
+        clearInterval(paintingRepeat);
+        paintingRepeat = setInterval(changePainting, 3500);
+    }
+}
+
+/* Start timer */
+var paintingRepeat = setInterval(changePainting, 3000);

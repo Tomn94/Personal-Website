@@ -14,6 +14,8 @@ $HEADER_BUTTONS = ['<a class="button" href="https://twitter.com/tomn94">Twitter<
 
 $COUNTRIES = "🇫🇷🇭🇰🇬🇧🇮🇪🇩🇪🇨🇳\n🇨🇿🇧🇪🇱🇺🇮🇹🇬🇷\n🇻🇳🇲🇲🇹🇭🇰🇭🇲🇴🇲🇦";
 
+$NBR_PAINTINGS = iterator_count(new FilesystemIterator('img/paintings/', FilesystemIterator::SKIP_DOTS));
+
 $PROJECTS =
 [
     [
@@ -130,18 +132,18 @@ $PROJECTS =
          "links"   => []],
          
         ["title"   => "∞Crypt",
-         "details" => "Encrypt & decrypt your files and texts with secure algorithms, in an innovative way thanks to plug-ins.<br>∞Crypt Files & ∞Crypt Text are cross-platform desktop apps.",
+         "details" => "Encrypt &amp; decrypt your files and texts with secure algorithms, in an innovative way thanks to plug-ins.<br>∞Crypt Files &amp; ∞Crypt Text are cross-platform desktop apps.",
          "imgs"    => ["img/projects/infinicryptfiles.png", "img/projects/infinicrypttext.png"],
          "links"   => []],
          
         ["title"   => "Tunnel Runners",
-         "details" => "Multiplayer high-speed races and fights between vehicles in a tunnel.<br>Create your own tracks & play with your friends.",
+         "details" => "Multiplayer high-speed races and fights between vehicles in a tunnel.<br>Create your own tracks &amp; play with your friends.",
          "imgs"    => ["img/projects/tunnelrunners.png"],
          "links"   => [],
          "inline"  => true],
          
         ["title"   => "Mario",
-         "details" => "<em>Mario & Luigi: Yoshis' Cookies Story</em> is a 2D Mario adventure gathering most of the characters from Mario games.",
+         "details" => "<em>Mario &amp; Luigi: Yoshis' Cookies Story</em> is a 2D Mario adventure gathering most of the characters from Mario games.",
          "imgs"    => ["img/projects/mario.png"],
          "links"   => [],
          "inline"  => true]
@@ -149,7 +151,7 @@ $PROJECTS =
     
     [
         ["title"   => "Network Chat",
-         "details" => "Client & server multi-platform chat on a local network.<br>Inconspicuous user interface, file transferts, chat commands…",
+         "details" => "Client &amp; server multi-platform chat on a local network.<br>Inconspicuous user interface, file transferts, chat commands…",
          "imgs"    => ["img/projects/netchat.png"],
          "links"   => [],
          "inline"  => true],

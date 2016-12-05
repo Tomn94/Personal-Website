@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="scripts/script.js"></script>
     
-    <?php /* Browser customization */ ?>
+<?php /* Browser customization */ ?>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="favicon.png">
     <link rel="icon" sizes="256x256" href="favicon.png">
@@ -22,7 +22,7 @@
     <meta name="theme-color" content="#F1783D">
     <link color="#F1783D" href="favicon.svg" rel="mask-icon">
     
-    <?php /* Bots integration */ ?>
+<?php /* Bots integration */ ?>
     <meta property="og:title" content="<?php echo $PAGE_TITLE_SHORT; ?>" />
     <meta property="og:description" content="<?php echo str_replace("\n", '. ', $DESCRIPTION); ?>" />
     <meta property="og:type" content="website" />
@@ -33,7 +33,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@tomn94" />
     
-    <?php /* External */ ?>
+<?php /* External */ ?>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:b" rel="stylesheet">
   </head>
   <body>
@@ -49,9 +49,9 @@
           
           <table>
               <tr class="altTitleColor">
-                  <?php foreach ($HEADER_TABLE_HEADERS as $header) { ?>
-                      <th><?php echo $header; ?></th>
-                  <?php } ?>
+<?php           foreach ($HEADER_TABLE_HEADERS as $header) { ?>
+                  <th><?php echo $header; ?></th>
+<?php           } ?>
               </tr>
               <tr>
                   <td data-th="<?php echo $HEADER_TABLE_HEADERS[0]; ?>">
@@ -59,7 +59,7 @@
                       <span id="tw-artist">The Naked and Famous</strong>
                       
                       <div class="hiddenButtons">
-                          <?php echo $HEADER_BUTTONS[0]; ?>
+                          <?php echo $HEADER_BUTTONS[0]."\n"; ?>
                       </div>
                   </td>
                   <td data-th="<?php echo $HEADER_TABLE_HEADERS[1]; ?>">
@@ -70,7 +70,7 @@
                       <span class="gitnote">+ BitBucket</span>
                       
                       <div class="hiddenButtons">
-                          <?php echo $HEADER_BUTTONS[1]; ?>
+                          <?php echo $HEADER_BUTTONS[1]."\n"; ?>
                       </div>
                   </td>
                   <td data-th="<?php echo $HEADER_TABLE_HEADERS[2]; ?>" class="flags"><?php echo nl2br($COUNTRIES); ?></td>
@@ -78,7 +78,7 @@
               <tr class="standardButtons">
                   <td><?php echo $HEADER_BUTTONS[0]; ?></td>
                   <td><?php echo $HEADER_BUTTONS[1]; ?></td>
-                  <td></td>
+                  <td>&nbsp;</td>
               </tr>
           </table>
       </header>
@@ -97,11 +97,12 @@
                 foreach ($PROJECTS as $projectsRow) {
                     if (is_array($projectsRow)) {
                     ?>
+
           <table>
               <tr>
-                  <?php
+<?php
                     foreach ($projectsRow as $project) {
-                       echo '<td';
+                       echo '                  <td';
                        if (count($projectsRow) == 1 || (isset($project["inline"]) && $project["inline"])) {
                            echo ' class="';
                            if (count($projectsRow) == 1) echo "large ";
@@ -112,40 +113,57 @@
                        foreach ($project["imgs"] as $img) {
                           if (strpos($img, '.mp4') !== false) {
                   ?>
-                  <video muted loop autoplay playsinline>
-                    <source src="<?php echo $img; ?>" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <?php
+
+                      <video muted loop autoplay playsinline>
+                          <source src="<?php echo $img; ?>" type="video/mp4" />
+                          Your browser does not support the video tag.
+                      </video><?php
                           } else {
                   ?>
-                    <img src="<?php echo $img; ?>" title="<?php
+
+                      <img src="<?php echo $img; ?>" title="<?php
                         echo $project["title"];
                         if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;';
                         if ($project["title"] == 'DigiSheep') echo '" style="max-width: 36%;';
                         ?>" /><?php
                           }
                        } ?>
-                       
-                    <br>
-                    <h2><?php echo $project["title"]; ?></h2>
-                    <p><?php echo $project["details"]; ?></p>
-                    <?php
+
+                      <br>
+                      <h2><?php echo $project["title"]; ?></h2>
+                      <p><?php echo $project["details"]; ?></p>
+<?php
                         foreach ($project["links"] as $linkInfo) {
                     ?>
-                    <a href="<?php echo $linkInfo[1]; ?>"><?php echo $linkInfo[0]; ?>&nbsp;<span>›</span></a>
-                    <?php } ?>
+                      <a href="<?php echo $linkInfo[1]; ?>"><?php echo $linkInfo[0]; ?>&nbsp;<span>›</span></a>
+<?php                   } ?>
                   </td>
-                  <?php } ?>
+<?php               } ?>
               </tr>
           </table>
-                   <?php
+<?php
                     } else {
-                        echo "<h3 class='letterpress'>".$projectsRow."</h3>";
+                        echo "\n          <h3 class='letterpress'>".$projectsRow."</h3>\n";
                     }
                 }
             }
           ?>
+      </section>
+      
+      <section id="paint">
+          <table>
+              <tr>
+                  <td>
+                      <h1 class="letterpress">I&nbsp;also&nbsp;enjoy&nbsp;playing tennis&nbsp;and&nbsp;drawing</h1>
+                  </td>
+                  <td id="gallery">
+<?php                 for ($i = 1 ; $i <= $NBR_PAINTINGS ; $i++) { ?>
+                      <img name="painting" src="img/paintings/<?php echo $i; ?>.jpg" title="Painting <?php echo $i; ?>" onclick="changePainting()"<?php
+                          if ($i == 1) echo ' style="opacity: 1"'; ?> />
+<?php                 } ?>
+                  </td>
+              </tr>
+          </table>
       </section>
       
       <footer class="letterpress">&copy; <?php echo $DATE_LAST_CHANGE; ?><br>
