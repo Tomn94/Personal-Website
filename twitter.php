@@ -4,7 +4,8 @@ function cleanTxtData($str) {
     $noTags = htmlspecialchars($str);
     $noNP = str_replace("#NP", "", str_replace("#NP ▶️", "", $noTags));
     $noLinks = preg_replace("|https?://([\d\w\.-]+\.[\w\.]{2,6})[^\s\]\[\<\>]*/?|i", "", $noNP);
-    return trim($noLinks);
+    $noRT = preg_replace("|RT @[A-Z]+[A-Z0-9]+:|i", "", $noLinks);
+    return trim($noRT);
 }
 
 /* Auth params */
@@ -13,7 +14,7 @@ $api_secret = urlencode('2W4iiQqpKDWtcrqKE8w26gBt9aFRW0gfhzF6JOmHWHq6MZkuvq'); /
 $auth_url   = 'https://api.twitter.com/oauth2/token'; 
 
 $data_username = 'Tomn_music';
-$data_nbr_tweets = 10;
+$data_nbr_tweets = 4;
 $data_url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 
 /* Get API access token */
@@ -39,8 +40,8 @@ $auth_token = $auth_response['access_token'];
 $data_context = stream_context_create( array( 'http' => array( 'header' => 'Authorization: Bearer '.$auth_token."\r\n", ) ) );
 
 $data = json_decode(file_get_contents($data_url.'?count='.data_nbr_tweets.'&screen_name='.urlencode($data_username).
-                                                '&exclude_replies=true&include_rts=false', 0, $data_context), true);
-                                                
+                                                '&exclude_replies=true&include_rts=true', 0, $data_context), true);
+
 if (count($data) < 1) return;
 
 /* Process */
