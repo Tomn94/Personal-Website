@@ -39,7 +39,7 @@ $auth_token = $auth_response['access_token'];
 /* Get tweets */
 $data_context = stream_context_create( array( 'http' => array( 'header' => 'Authorization: Bearer '.$auth_token."\r\n", ) ) );
 
-$data = json_decode(file_get_contents($data_url.'?count='.data_nbr_tweets.'&screen_name='.urlencode($data_username).
+$data = json_decode(file_get_contents($data_url.'?count='.$data_nbr_tweets.'&screen_name='.urlencode($data_username).
                                                 '&exclude_replies=true&include_rts=true', 0, $data_context), true);
 
 if (count($data) < 1) return;
@@ -47,6 +47,9 @@ if (count($data) < 1) return;
 /* Process */
 // Get music data: a line of text containing #NP
 $lastTweet = $data[0]['text'];
+if (isset($data[0]["retweeted_status"]) && isset($data[0]["retweeted_status"]["text"])) {
+    $lastTweet = $data[0]["retweeted_status"]["text"];
+}
 $lines = explode("\n", $lastTweet);
 $lineWithInfos = "";
 foreach ($lines as $line) {
