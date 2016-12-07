@@ -103,11 +103,12 @@ $PROJECTS =
     ],
     
     [
-        ["title"   => "@tomn_ebooks",
-         "details" => "Me, as a Twitter bot.<br>Mix of my tweets.",
+        ["title"   => "@tomn_ebooks<br>@tomn_music",
+         "details" => "Me, as a Twitter bot, mixing my tweets.<br>&nbsp;<br>The other account gathers some of my songs playing.",
          "imgs"    => ["img/projects/ebooks.png"],
-         "links"   => [["View on Twitter", "https://twitter.com/tomn_ebooks"],
-                       ["View on GitHub", "https://github.com/Tomn94/ebooks_example"]],
+         "links"   => [["View @tomn_ebooks on Twitter", "https://twitter.com/tomn_ebooks"],
+                       ["View @tomn_ebooks on GitHub", "https://github.com/Tomn94/ebooks_example"],
+                       ["View @tomn_music on Twitter", "https://twitter.com/tomn_music"],],
          "inline"  => true],
          
         ["title"   => "Music Tweet",
