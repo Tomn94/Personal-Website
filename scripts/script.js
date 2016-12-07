@@ -40,6 +40,7 @@ var skills = [];
 var animation = null;
 var animationFrame;
 var timer;
+var screenSize = [window.outerWidth, window.outerHeight];
 
 function sizeToFit() {
     canvas = document.getElementById("skillsCanvas");
@@ -61,10 +62,22 @@ window.onload = function() {
         animate();
     }, 1000);
 };
-window.onresize = window.onload;
+window.onresize = function() {
+    if (window.outerWidth != screenSize[0] || window.outerHeight != screenSize[1]) {
+        screenSize[0] = window.outerWidth;
+        screenSize[1] = window.outerHeight;
+        
+        window.onload();
+    }
+}
+window.addEventListener("orientationchange", function() {
+    window.onload();
+}, false);
 
 function loadSkills() {
-    skills.length = 0;
+    while (skills.length > 0) {
+        skills.pop();
+    }
     skillList.forEach(function(skill) {
         addSkill(skill);
     });
@@ -185,6 +198,7 @@ function pauseAnimation() {
 }
 
 function animate() {
+    pauseAnimation();
     animation = setInterval(function() {
         animationFrame = window.requestAnimationFrame(draw);
     }, 20);

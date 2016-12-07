@@ -90,7 +90,12 @@
           <h1>Skills</h1>
           
           <canvas id="skillsCanvas">
-            Your browser does not support canvas.
+            Some of my skills are: <?php
+                for ($i = 0 ; $i < count($SKILLS) ; $i++) {
+                    if ($i != 0) echo ", ";
+                    echo $SKILLS[$i][0];
+                } ?>
+
           </canvas>
           
           <div id="boxLayer"></div>

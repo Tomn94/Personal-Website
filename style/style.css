@@ -83,7 +83,7 @@ header #avatar {
     height: 110px;
     width: 110px;
     margin: 20px auto -5px auto;
-    background: url('../img/avatar.jpg') no-repeat;
+    background: white url('../img/avatar.jpg') no-repeat;
     background-size: cover;
     background-position: center center;
     background-clip: content-box;
@@ -430,6 +430,6 @@ footer {
 
 @media only screen and (max-width: 850px) {
     #skills {
-        height: 500px;
+        height: 600px;
     }
 }
