@@ -14,11 +14,19 @@ var onScroll = function(evt) {
     /* Check if header is visible */
     var doc = document.documentElement;
     var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    var height = document.getElementsByTagName("header")[0].clientHeight + 60;
+    var height = 60 + document.getElementsByTagName("header")[0].clientHeight;
+    
     if (top > height && document.body.className != 'paused') {
         toggleAnimation(false);
     } else if (top < height && document.body.className == 'paused') {
         toggleAnimation(true);
+    }
+    
+    var heightSkills = height + document.getElementById("skills").clientHeight;
+    if (top > heightSkills) {
+        pauseAnimation();
+    } else if (top < heightSkills && animation == null) {
+        animate();
     }
 };
 
@@ -29,7 +37,9 @@ window.addEventListener("scroll", onScroll);
 var canvas;
 var ctx;
 var skills = [];
-var animation;
+var animation = null;
+var animationFrame;
+var timer;
 
 function sizeToFit() {
     canvas = document.getElementById("skillsCanvas");
@@ -37,24 +47,49 @@ function sizeToFit() {
     canvas.width = parent.offsetWidth;
     canvas.height = parent.offsetHeight;
 }
-window.onresize = sizeToFit;
 window.onload = function() {
+    canvas = document.getElementById("skillsCanvas");
+    canvas.style.opacity = '0';
+    pauseAnimation();
     sizeToFit();
-    
-    
-    addSkill(100, 100);
-    addSkill(400, 100);
+    loadSkills();
+    if (timer) {
+        clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+        canvas.style.opacity = '1';
+        animate();
+    }, 1000);
 };
+window.onresize = window.onload;
 
-function addSkill(x, y) {
+function loadSkills() {
+    skills.length = 0;
+    skillList.forEach(function(skill) {
+        addSkill(skill);
+    });
+}
+
+var SkillType = Object.freeze({ BIG: 1, MEDIUM: 2, SMALL: 3});
+
+function addSkill(skill) {
+    canvas = document.getElementById("skillsCanvas");
     ctx = canvas.getContext('2d');
     
-    var skill = {
+    var name = skill[0],
+        type = skill[1],
+        velocity = (type == SkillType.BIG) ? 0.1 : ((type == SkillType.MEDIUM) ? 0.3 : 0.5);
+        radius = (type == SkillType.BIG) ? 60 : ((type == SkillType.MEDIUM) ? 40 : 25);
+    
+    var x = radius,
+        y = radius;
+    
+    var newSkill = {
         x: x,
         y: y,
-        vx: 5,
-        vy: 5,
-        radius: 100,
+        vx: velocity,
+        vy: velocity * Math.random(),
+        radius: radius,
         color: 'white',
         draw: function() {
             ctx.beginPath();
@@ -64,34 +99,96 @@ function addSkill(x, y) {
             ctx.fill();
         }
     };
-    skill.draw();
-    skills.push(skill);
-}
     
+    var alone = true;
+    var watchdog = 0;
+    do {
+        alone = true;
+        for (var i = 0 ; i < skills.length && alone ; i++) {
+            var otherSkill = skills[i];
+            if (isColliding(newSkill, otherSkill)) {
+                alone = false;
+                newSkill.x = Math.floor((Math.random() * canvas.width) + 1);
+                newSkill.y = Math.floor((Math.random() * canvas.height) + 1);
+                if (isOutsideX(newSkill)) {
+                    newSkill.x = newSkill.radius;
+                }
+                if (isOutsideY(newSkill)) {
+                    newSkill.y = newSkill.radius;
+                }
+            }
+        }
+        watchdog++;
+    } while (!alone && watchdog < 100);
+    
+    skills.push(newSkill);
+}
+
+function isColliding(skill1, skill2) {
+    var radiiSum = skill1.radius + skill2.radius;
+    var xDiff = skill1.x - skill2.x;
+    var yDiff = skill1.y - skill2.y;
+    var centerDist = Math.floor(Math.sqrt((xDiff * xDiff) + (yDiff * yDiff)));
+    
+    return (centerDist <= radiiSum);
+}
+
+function isOutsideX(skill) {
+    canvas = document.getElementById("skillsCanvas");
+    return (skill.x <= 0 || skill.x >= canvas.width);
+}
+
+function isOutsideY(skill) {
+    canvas = document.getElementById("skillsCanvas");
+    return (skill.y <= 0 || skill.y >= canvas.height);
+}
+
 function draw() {
-    ctx.clearRect(0,0, canvas.width, canvas.height);
+    canvas = document.getElementById("skillsCanvas");
+    ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     skills.forEach(function(skill, index) {
         skill.draw();
         skill.x += skill.vx;
         skill.y += skill.vy;
-        skill.vy *= 1.01;
         
-        if (skill.vy > 20)
-            skill.vy = 1;
-        
-        if (skill.y + skill.radius >= canvas.height || skill.y - skill.radius <= 0) {
-            skill.vy = -skill.vy;
+        /* Combine every skill without repetition to find out if collision */
+        for (var i = index + 1 ; i < skills.length ; i++) {
+            var otherSkill = skills[i];
+            if (isColliding(skill, otherSkill)) {
+                skill.vy = -skill.vy;
+                skill.vx = -skill.vx;
+                otherSkill.vy = -otherSkill.vy;
+                otherSkill.vx = -otherSkill.vx;
+            }
         }
-        if (skill.x + skill.radius >= canvas.width || skill.x - skill.radius <= 0) {
+        
+        /* Border collision */
+        if (isOutsideX(skill)) {
             skill.vx = -skill.vx;
+        }
+        if (isOutsideY(skill)) {
+            skill.vy = -skill.vy;
         }
     });
 }
 
-animation = setInterval(function() {
-    window.requestAnimationFrame(draw);
-}, 20);
+function pauseAnimation() {
+    if (animation) {
+        clearInterval(animation);
+    }
+    animation = null;
+    if (animationFrame) {
+        window.cancelAnimationFrame(animationFrame);
+    }
+}
+
+function animate() {
+    animation = setInterval(function() {
+        animationFrame = window.requestAnimationFrame(draw);
+    }, 20);
+}
 
 
 /* GITHUB */

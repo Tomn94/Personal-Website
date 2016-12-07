@@ -16,6 +16,57 @@ $COUNTRIES = "🇫🇷🇭🇰🇬🇧🇮🇪🇩🇪🇨🇳\n🇨🇿🇧🇪
 
 $NBR_PAINTINGS = iterator_count(new FilesystemIterator('img/paintings/', FilesystemIterator::SKIP_DOTS));
 
+$SKILLS = [["iOS", 1],
+           ["Android", 1],
+           ["Swift", 1],
+           ["Java", 1],
+           ["Objective-C", 1],
+           ["C", 1],
+           ["C++", 1],
+           ["Qt", 1],
+           ["Basic", 2],
+           ["JavaScript", 1],
+           ["PHP", 1],
+           ["SQL", 1],
+           ["HTML", 1],
+           ["CSS", 1],
+           ["jQuery", 3],
+           ["JSON", 2],
+           ["REST", 3],
+           ["XML", 3],/*
+           ["UI/UX Design", 2],
+           ["2D/3D Graphic Design", 2],*/
+           ["Photoshop", 3],
+           ["3DS Max", 3],
+           ["Print", 3],
+           ["UML", 2],
+           ["LaTeX", 2],
+           ["Altium Designer", 3],
+           ["VHDL", 3],
+           /*["Film Editing", 3],*/
+           ["Resolume", 3],
+           ["macOS", 2],
+           ["Linux/UNIX", 3],
+           ["Raspberry π", 3],
+           ["Windows", 3],
+           ["C#", 3],
+           ["AppleScript", 3],
+           ["Assembly", 3]/*,
+           ["OpenGL", 3],
+           ["Maple", 3],
+           ["Matlab", 3],
+           ["OpenData", 3],
+           ["Networks", 3],
+           ["Management", 3],
+           ["Hardware", 3],
+           ["Maintenance", 3],
+           ["Automatics", 3],
+           ["Mechanics", 3],
+           ["Sensors", 3],
+           ["Microprocessors", 3],
+           ["Power/commutation electronics", 2],
+           ["Signal processing", 2]*/];
+
 $PROJECTS =
 [
     [

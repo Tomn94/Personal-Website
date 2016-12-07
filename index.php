@@ -92,6 +92,12 @@
           <canvas id="skillsCanvas">
             Your browser does not support canvas.
           </canvas>
+          
+          <div id="boxLayer"></div>
+          
+          <script>
+              var skillList = <?=json_encode($SKILLS)?>;
+          </script>
       </section>
       
       <section id="projects">
