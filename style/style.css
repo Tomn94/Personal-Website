@@ -79,6 +79,19 @@ header nav {
     margin: 20px 0px;
 }
 
+header #avatar {
+    height: 110px;
+    width: 110px;
+    margin: 20px auto -5px auto;
+    background: url('../img/avatar.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-clip: content-box;
+    border-radius: 65px;
+    border: 5px solid rgba(255, 255, 255, 0.75);
+/*     box-shadow: inset 0px -10px 8px white; */
+}
+
 /* BUTTONS */
 
 .button {
@@ -91,8 +104,9 @@ header nav {
     top: 0;
     border: none;
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #FF4260;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    mix-blend-mode: overlay;
     font-size: 1.25em;
     text-decoration: none;
     cursor: pointer;
@@ -100,13 +114,15 @@ header nav {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    transition: 0.2s all ease-in-out;
+    transition: top 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .button:hover {
-    top: -4px;
+    top: -6px;
     box-shadow: 0px 1px 8px white;
     background: white;
+    color: #FF4260;
+    mix-blend-mode: initial;
 }
 
 .button:active {
@@ -121,9 +137,12 @@ header nav {
     width: 1px;
     position: absolute;
     top: -1px;
-    background: #FF4260;
+    background: black;
     transform: rotate(18deg);
-    transition: 0.2s background ease-in-out;
+}
+
+.button:hover .slash {
+    background: #FF4260;
 }
 
 .button:active .slash {
@@ -166,13 +185,7 @@ header td, th {
     height: 350px;
     background-color: #383835;
     box-shadow: inset 0 30px 30px -30px rgba(0,0,0,0.6), inset 0 -30px 30px -30px rgba(0,0,0,0.6);
-}
-
-#skills div {
-    font-family: 'SFMono-Regular', 'SF Mono', 'Inconsolata', 'Lucida Console', Monaco, monospace;
-    color: #383835;
-    background: white;
-    max-width: 100px;
+    position: relative;
 }
 
 #skills h1, #projects, #paint {
@@ -191,6 +204,12 @@ header td, th {
 #skills h1 {
     color: white;
     text-shadow: 0px 0px 30px black;
+    position: relative;
+}
+
+#skillsCanvas {
+    position: absolute;
+    top: 0;
 }
 
 
@@ -285,7 +304,8 @@ header td, th {
 }
 
 
-/* Misc */
+/* MISC */
+
 #paint table {
     margin-top: -30px;
     vertical-align: middle;
@@ -295,6 +315,7 @@ header td, th {
 #paint h1 {
     font-size: 1.5em;
     padding-top: 35px;
+    padding-left: 15px;
 }
 
 #paint #gallery {
@@ -349,8 +370,17 @@ footer {
         display: block;
     }
     
+    header #gitHubHiddenButtons a {
+        position: relative;
+        top: -6px;
+    }
+    
     header .standardButtons {
         display: none;
+    }
+    
+    .gitnote {
+        top: 0px;
     }
     
     .stayInline {
@@ -379,6 +409,6 @@ footer {
     }
     
     #paint img {
-        left: 0;
+        left: 15px;
     }
 }

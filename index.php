@@ -40,6 +40,7 @@
       <header>
           <h1>Thomas Naudet</h1>
           <h2 class="altTitleColor"><?=nl2br($DESCRIPTION)?></h2>
+          <div id="avatar">&nbsp;</div>
               
           <nav>
               <a class="button" href="mailto:t%6d%6E%73%74%75%64%69%6Fs%40%68%6ft%6d%61%69%6C%2e%66%72">Mail</a>
@@ -65,15 +66,17 @@
                   <td data-th="<?=$HEADER_TABLE_HEADERS[1]?>">
                       <span id="gh-repos">14+</span> repositories<br>
                       last commit <span id="gh-commit-time">some time ago</span><br>
-                      <span id="gh-contributions">So many</span> contributions this year<br>
+                      <span id="gh-contributions">Many</span> contributions this year<br>
                       
                       <span class="gitnote">+ BitBucket</span>
                       
-                      <div class="hiddenButtons">
+                      <div class="hiddenButtons" id="gitHubHiddenButtons">
                           <?=$HEADER_BUTTONS[1]."\n"?>
                       </div>
                   </td>
-                  <td data-th="<?$HEADER_TABLE_HEADERS[2]?>" class="flags"><?=nl2br($COUNTRIES)?></td>
+                  <td data-th="<?=$HEADER_TABLE_HEADERS[2]?>" class="flags">
+                      <?=nl2br($COUNTRIES)?>
+                  </td>
               </tr>
               <tr class="standardButtons">
                   <td><?=$HEADER_BUTTONS[0]?></td>
@@ -86,7 +89,9 @@
       <section id="skills">
           <h1>Skills</h1>
           
-          <div>iOS SDK</div>
+          <canvas id="skillsCanvas">
+            Your browser does not support canvas.
+          </canvas>
       </section>
       
       <section id="projects">
