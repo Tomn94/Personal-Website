@@ -6,7 +6,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><?php echo $PAGE_TITLE; ?></title>
+    <title><?=$PAGE_TITLE?></title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style/style.css">
     <script src="scripts/script.js"></script>
@@ -17,16 +17,16 @@
     <link rel="icon" sizes="256x256" href="favicon.png">
     <meta name="msapplication-TileImage" content="favicon.png"/>
     <meta name="msapplication-TileColor" content="#F1783D"/>
-    <meta name="application-name" content="<?php echo $PAGE_TITLE_SHORT; ?>">
-    <meta name="apple-mobile-web-app-title" content="<?php echo $PAGE_TITLE; ?>">
+    <meta name="application-name" content="<?=$PAGE_TITLE_SHORT?>">
+    <meta name="apple-mobile-web-app-title" content="<?=$PAGE_TITLE?>">
     <meta name="theme-color" content="#F1783D">
     <link color="#F1783D" href="favicon.svg" rel="mask-icon">
     
 <?php /* Bots integration */ ?>
-    <meta property="og:title" content="<?php echo $PAGE_TITLE_SHORT; ?>" />
-    <meta property="og:description" content="<?php echo str_replace("\n", '. ', $DESCRIPTION); ?>" />
+    <meta property="og:title" content="<?=$PAGE_TITLE_SHORT?>" />
+    <meta property="og:description" content="<?=str_replace("\n", '. ', $DESCRIPTION)?>" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="<?php echo $BASE_URL; ?>/img/avatar.jpg" />
+    <meta property="og:image" content="<?=$BASE_URL?>/img/avatar.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="442" />
     <meta property="og:image:height" content="442" />
@@ -39,7 +39,7 @@
   <body>
       <header>
           <h1>Thomas Naudet</h1>
-          <h2 class="altTitleColor"><?php echo nl2br($DESCRIPTION); ?></h2>
+          <h2 class="altTitleColor"><?=nl2br($DESCRIPTION)?></h2>
               
           <nav>
               <a class="button" href="mailto:t%6d%6E%73%74%75%64%69%6Fs%40%68%6ft%6d%61%69%6C%2e%66%72">Mail</a>
@@ -50,19 +50,19 @@
           <table>
               <tr class="altTitleColor">
 <?php           foreach ($HEADER_TABLE_HEADERS as $header) { ?>
-                  <th><?php echo $header; ?></th>
+                  <th><?=$header?></th>
 <?php           } ?>
               </tr>
               <tr>
-                  <td data-th="<?php echo $HEADER_TABLE_HEADERS[0]; ?>">
+                  <td data-th="<?=$HEADER_TABLE_HEADERS[0]?>">
                       <span id="tw-name" style="font-weight: 300;">Young Blood</span><br>
                       <span id="tw-artist">The Naked and Famous</strong>
                       
                       <div class="hiddenButtons">
-                          <?php echo $HEADER_BUTTONS[0]."\n"; ?>
+                          <?=$HEADER_BUTTONS[0]."\n"?>
                       </div>
                   </td>
-                  <td data-th="<?php echo $HEADER_TABLE_HEADERS[1]; ?>">
+                  <td data-th="<?=$HEADER_TABLE_HEADERS[1]?>">
                       <span id="gh-repos">14+</span> repositories<br>
                       last commit <span id="gh-commit-time">some time ago</span><br>
                       <span id="gh-contributions">So many</span> contributions this year<br>
@@ -70,14 +70,14 @@
                       <span class="gitnote">+ BitBucket</span>
                       
                       <div class="hiddenButtons">
-                          <?php echo $HEADER_BUTTONS[1]."\n"; ?>
+                          <?=$HEADER_BUTTONS[1]."\n"?>
                       </div>
                   </td>
-                  <td data-th="<?php echo $HEADER_TABLE_HEADERS[2]; ?>" class="flags"><?php echo nl2br($COUNTRIES); ?></td>
+                  <td data-th="<?$HEADER_TABLE_HEADERS[2]?>" class="flags"><?=nl2br($COUNTRIES)?></td>
               </tr>
               <tr class="standardButtons">
-                  <td><?php echo $HEADER_BUTTONS[0]; ?></td>
-                  <td><?php echo $HEADER_BUTTONS[1]; ?></td>
+                  <td><?=$HEADER_BUTTONS[0]?></td>
+                  <td><?=$HEADER_BUTTONS[1]?></td>
                   <td>&nbsp;</td>
               </tr>
           </table>
@@ -115,13 +115,13 @@
                   ?>
 
                       <video muted loop autoplay playsinline>
-                          <source src="<?php echo $img; ?>" type="video/mp4" />
+                          <source src="<?=$img?>" type="video/mp4" />
                           Your browser does not support the video tag.
                       </video><?php
                           } else {
                   ?>
 
-                      <img src="<?php echo $img; ?>" title="<?php
+                      <img src="<?=$img?>" title="<?php
                         echo $project["title"];
                         if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;';
                         if ($project["title"] == 'DigiSheep') echo '" style="max-width: 36%;';
@@ -130,12 +130,12 @@
                        } ?>
 
                       <br>
-                      <h2><?php echo $project["title"]; ?></h2>
-                      <p><?php echo $project["details"]; ?></p>
+                      <h2><?=$project["title"]?></h2>
+                      <p><?=$project["details"]?></p>
 <?php
                         foreach ($project["links"] as $linkInfo) {
                     ?>
-                      <a href="<?php echo $linkInfo[1]; ?>"><?php echo $linkInfo[0]; ?>&nbsp;<span>›</span></a>
+                      <a href="<?=$linkInfo[1]?>"><?=$linkInfo[0]?>&nbsp;<span>›</span></a>
 <?php                   } ?>
                   </td>
 <?php               } ?>
@@ -158,7 +158,7 @@
                   </td>
                   <td id="gallery">
 <?php                 for ($i = 1 ; $i <= $NBR_PAINTINGS ; $i++) { ?>
-                      <img name="painting" src="img/paintings/<?php echo $i; ?>.jpg" title="Painting <?php echo $i; ?>" onclick="changePainting()"<?php
+                      <img name="painting" src="img/paintings/<?=$i?>.jpg" title="Painting <?=$i?>" onclick="changePainting()"<?php
                           if ($i == 1) echo ' style="opacity: 1"'; ?> />
 <?php                 } ?>
                   </td>
@@ -166,7 +166,7 @@
           </table>
       </section>
       
-      <footer class="letterpress">&copy; <?php echo $DATE_LAST_CHANGE; ?><br>
+      <footer class="letterpress">&copy; <?=$DATE_LAST_CHANGE?><br>
           Everything here is home-made except the fonts
       </footer>
   </body>
