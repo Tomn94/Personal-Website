@@ -25,6 +25,75 @@ var onScroll = function(evt) {
 window.addEventListener("scroll", onScroll);
 
 
+/* CANVAS */
+var canvas;
+var ctx;
+var skills = [];
+var animation;
+
+function sizeToFit() {
+    canvas = document.getElementById("skillsCanvas");
+    var parent = document.getElementById("skills");
+    canvas.width = parent.offsetWidth;
+    canvas.height = parent.offsetHeight;
+}
+window.onresize = sizeToFit;
+window.onload = function() {
+    sizeToFit();
+    
+    
+    addSkill(100, 100);
+    addSkill(400, 100);
+};
+
+function addSkill(x, y) {
+    ctx = canvas.getContext('2d');
+    
+    var skill = {
+        x: x,
+        y: y,
+        vx: 5,
+        vy: 5,
+        radius: 100,
+        color: 'white',
+        draw: function() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, 2*Math.PI);
+            ctx.closePath();
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
+    };
+    skill.draw();
+    skills.push(skill);
+}
+    
+function draw() {
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    
+    skills.forEach(function(skill, index) {
+        skill.draw();
+        skill.x += skill.vx;
+        skill.y += skill.vy;
+        skill.vy *= 1.01;
+        
+        if (skill.vy > 20)
+            skill.vy = 1;
+        
+        if (skill.y + skill.radius >= canvas.height || skill.y - skill.radius <= 0) {
+            skill.vy = -skill.vy;
+        }
+        if (skill.x + skill.radius >= canvas.width || skill.x - skill.radius <= 0) {
+            skill.vx = -skill.vx;
+        }
+    });
+}
+
+animation = setInterval(function() {
+    window.requestAnimationFrame(draw);
+}, 20);
+
+
 /* GITHUB */
 
 /* Repositories & Commits */
