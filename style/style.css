@@ -4,6 +4,7 @@
     font-family: system, -apple-system, BlinkMacSystemFont,
       "Helvetica Neue", "Lucida Grande", "Roboto", "Ubuntu", Arial, sans-serif;
     font-weight: 300;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -59,7 +60,7 @@ header {
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     background-color: #FF4260;
-    background: -webkit-linear-gradient(-18deg, #FF3431 0%, #FFBD41 8.3%, #8FCB3F 16.6%, #00E5FF 25%, #3277FF 33.3%, #FB67FF 41.6%, #FF3431 50%, #FFBD41 58.3%, #8FCB3F 66.6%, #00E5FF 75%, #3277FF 83.3%, #FB67FF 91.6%, #FF3431 100%);
+    background: linear-gradient(110deg, #FF3431 0%, #FFBD41 8.3%, #8FCB3F 16.6%, #00E5FF 25%, #3277FF 33.3%, #FB67FF 41.6%, #FF3431 50%, #FFBD41 58.3%, #8FCB3F 66.6%, #00E5FF 75%, #3277FF 83.3%, #FB67FF 91.6%, #FF3431 100%);
     background-size: 1000% 200%;
     animation: SlideBG 180s linear infinite;
 }
@@ -89,7 +90,6 @@ header #avatar {
     background-clip: content-box;
     border-radius: 65px;
     border: 5px solid rgba(255, 255, 255, 0.75);
-/*     box-shadow: inset 0px -10px 8px white; */
 }
 
 /* BUTTONS */
@@ -97,9 +97,9 @@ header #avatar {
 .button {
     display: inline-block;
     margin: 5px 8px;
-    padding: 9px 20px 8px 20px;
+    padding: 9px 15px 8px 15px;
     height: 25px;
-    width: 110px;
+    width: 120px;
     position: relative;
     top: 0;
     border: none;
@@ -115,6 +115,8 @@ header #avatar {
     -ms-user-select: none;
     user-select: none;
     transition: top 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .button:hover {
@@ -206,7 +208,7 @@ header td, th {
 
 #skills h1, #projects h1, #projects h3, #paint h1 {
     font-family: 'SFMono-Heavy', 'SF Mono', 'Inconsolata', Monaco, 'Lucida Console', monospace;
-    font-weight: bolder;
+    font-weight: 900;
     font-size: 2em;
     color: #FF4260;
 }
@@ -386,12 +388,20 @@ footer {
         top: -6px;
     }
     
+    header #gitHubHiddenButtons a:hover {
+        top: -12px;
+    }
+    
     header .standardButtons {
         display: none;
     }
     
     .gitnote {
         top: 0px;
+    }
+    
+    #skills {
+        height: 600px;
     }
     
     .stayInline {
@@ -415,10 +425,6 @@ footer {
         max-height: 400px;
     }
     
-    #skills {
-        height: 600px;
-    }
-    
     #paint h1 {
         padding-top: 0;
     }
@@ -431,5 +437,14 @@ footer {
 @media only screen and (max-width: 850px) {
     #skills {
         height: 600px;
+    }
+}
+
+@-moz-document url-prefix() { 
+    header h1 {
+        letter-spacing: 2px;
+    }
+    #projects h2 {
+        letter-spacing: 1px;
     }
 }
