@@ -1,8 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: system, -apple-system, BlinkMacSystemFont,
-      "Helvetica Neue", "Lucida Grande", "Roboto", "Ubuntu", Arial, sans-serif;
+    font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", "Roboto", "Ubuntu", Arial, sans-serif;
     font-weight: 300;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -196,6 +195,19 @@ header td, th {
 
 /* SKILLS */
 
+@font-face {
+  font-family: 'SFMono-Heavy';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../res/SFMono-Heavy.otf') format('opentype');
+}
+@font-face {
+  font-family: 'SFMono-Regular';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../res/SFMono-Regular.otf') format('opentype');
+}
+
 #skills {
     height: 400px;
     background-color: #383835;
@@ -228,7 +240,7 @@ header td, th {
 }
 
 #skills h1 {
-    text-shadow: 0px 0px 30px black;
+    text-shadow: 0 0 25px black;
     position: relative;
     z-index: 100;
 }

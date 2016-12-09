@@ -32,9 +32,6 @@
     <meta property="og:image:height" content="442" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@tomn94" />
-    
-<?php /* External */ ?>
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata:b" rel="stylesheet">
   </head>
   <body>
       <header>
@@ -91,11 +88,13 @@
           <h1>Computer Skills</h1>
           
           <canvas id="skillsCanvas">
-            Some of my skills are: <?php
+            <?php
+                $skillsString = "Some of my skills are: ";
                 for ($i = 0 ; $i < count($SKILLS) ; $i++) {
-                    if ($i != 0) echo ", ";
-                    echo $SKILLS[$i][0];
-                } ?>
+                    if ($i != 0) $skillsString .= ", ";
+                      $skillsString .= $SKILLS[$i][0];
+                }
+                echo $skillsString; ?>
 
           </canvas>
           
