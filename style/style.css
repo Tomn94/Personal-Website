@@ -90,6 +90,21 @@ header #avatar {
     border: 5px solid rgba(255, 255, 255, 0.75);
 }
 
+header #avatar:hover {
+    position: relative;
+    animation: bounce 0.8s infinite;
+    animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    transform-origin: center bottom;
+}
+
+@keyframes bounce {
+    0% { bottom: 0px; }
+    30% { transform: scaleY(1); }
+    50% { bottom: -20px; transform: scaleY(.9); }
+    60% { transform: scaleY(1); }
+    100% { bottom: 0px; }
+}
+
 /* BUTTONS */
 
 .button {
