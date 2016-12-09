@@ -2,15 +2,16 @@
     
 function cleanTxtData($str) {
     $noTags = htmlspecialchars($str);
-    $noNP = str_replace("#NP", "", str_replace("#NP ▶️", "", $noTags));
+    $noNP = str_replace("#NowPlaying", "", str_replace("#NP", "", str_replace("#NP ▶️", "", $noTags)));
     $noLinks = preg_replace("|https?://([\d\w\.-]+\.[\w\.]{2,6})[^\s\]\[\<\>]*/?|i", "", $noNP);
     $noRT = preg_replace("|RT @[A-Z]+[A-Z0-9]+:|i", "", $noLinks);
     return trim($noRT);
 }
 
 /* Auth params */
-$api_key    = urlencode('2cC80TYBJHScePMzwSnGvVJNp'); // Consumer Key (API Key)
-$api_secret = urlencode('2W4iiQqpKDWtcrqKE8w26gBt9aFRW0gfhzF6JOmHWHq6MZkuvq'); // Consumer Secret (API Secret)
+$api_config = json_decode(file_get_contents('config.json'), true);
+$api_key    = urlencode($api_config['twitterApiKey']); // Consumer Key (API Key)
+$api_secret = urlencode($api_config['twitterApiSecret']); // Consumer Secret (API Secret)
 $auth_url   = 'https://api.twitter.com/oauth2/token'; 
 
 $data_username = 'Tomn_music';
@@ -45,7 +46,7 @@ $data = json_decode(file_get_contents($data_url.'?count='.$data_nbr_tweets.'&scr
 if (count($data) < 1) return;
 
 /* Process */
-// Get music data: a line of text containing #NP
+// Get music data: a line of text containing #NP or #NowPlaying
 $lastTweet = $data[0]['text'];
 if (isset($data[0]["retweeted_status"]) && isset($data[0]["retweeted_status"]["text"])) {
     $lastTweet = $data[0]["retweeted_status"]["text"];
@@ -53,7 +54,7 @@ if (isset($data[0]["retweeted_status"]) && isset($data[0]["retweeted_status"]["t
 $lines = explode("\n", $lastTweet);
 $lineWithInfos = "";
 foreach ($lines as $line) {
-    if (strpos($line, "#NP") !== false) {
+    if (strpos($line, "#NP") !== false || strpos($line, "#NowPlaying") !== false) {
         $lineWithInfos = $line;
         break;
     }
