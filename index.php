@@ -76,6 +76,7 @@
                   </td>
                   <td data-th="<?=$HEADER_TABLE_HEADERS[2]?>" class="flags">
                       <?=nl2br($COUNTRIES)?>
+
                   </td>
               </tr>
               <tr class="standardButtons">
@@ -87,7 +88,7 @@
       </header>
       
       <section id="skills">
-          <h1>Skills</h1>
+          <h1>Computer Skills</h1>
           
           <canvas id="skillsCanvas">
             Some of my skills are: <?php
@@ -101,7 +102,9 @@
           <div id="boxLayer"></div>
           
           <script>
-              var skillList = <?=json_encode($SKILLS)?>;
+              var skillList = <?=json_encode(array_values(array_filter($SKILLS, function($item) {
+                                                                      return $item[3];
+                                                                   })))?>;
           </script>
       </section>
       

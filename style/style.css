@@ -40,18 +40,15 @@ video {
 
 @-webkit-keyframes SlideBG {
     0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    100%{background-position:100% 50%}
 }
 @-moz-keyframes SlideBG {
     0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    100%{background-position:100% 50%}
 }
 @keyframes SlideBG { 
     0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    100%{background-position:100% 50%}
 }
 
 header {
@@ -60,9 +57,10 @@ header {
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     background-color: #FF4260;
-    background: linear-gradient(110deg, #FF3431 0%, #FFBD41 8.3%, #8FCB3F 16.6%, #00E5FF 25%, #3277FF 33.3%, #FB67FF 41.6%, #FF3431 50%, #FFBD41 58.3%, #8FCB3F 66.6%, #00E5FF 75%, #3277FF 83.3%, #FB67FF 91.6%, #FF3431 100%);
+    background: linear-gradient(108deg, #FF3431 0%, #FFBD41 8.3%, #8FCB3F 16.6%, #00E5FF 25%, #3277FF 33.3%, #FB67FF 41.6%, #FF3431 50%, #FFBD41 58.3%, #8FCB3F 66.6%, #00E5FF 75%, #3277FF 83.3%, #FB67FF 91.6%, #FF3431 100%);
     background-size: 1000% 200%;
-    animation: SlideBG 180s linear infinite;
+    animation: SlideBG 90s linear infinite alternate;
+    transform: translateZ(0);   /* Use GPU optimization */
 }
 
 header h1 {
@@ -188,6 +186,7 @@ header td, th {
     background-color: #383835;
     position: relative;
     overflow: hidden;
+    border-bottom: 1px solid white;
 }
 
 #boxLayer {

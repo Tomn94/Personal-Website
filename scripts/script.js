@@ -1,5 +1,7 @@
+var enableExternalSources = false;		// enable GitHub, Twitter, …
+
 /* Stop header from animating */
-function toggleAnimation(on) {
+function toggleHeaderAnimation(on) {
     var style = document.getElementsByTagName("header")[0].style;
     if (on) {
         style.webkitAnimationPlayState = 'running';
@@ -17,19 +19,21 @@ var onScroll = function(evt) {
     var height = 60 + document.getElementsByTagName("header")[0].clientHeight;
     
     if (top > height && document.body.className != 'paused') {
-        toggleAnimation(false);
+        toggleHeaderAnimation(false);
     } else if (top < height && document.body.className == 'paused') {
-        toggleAnimation(true);
+        toggleHeaderAnimation(true);
     }
     
+    /* Check if skills are visible */
     var heightSkills = height + document.getElementById("skills").clientHeight;
     if (top > heightSkills) {
-        pauseAnimation();
+        pauseSkillsAnimation();
     } else if (top < heightSkills && animation == null) {
-        animate();
+        animateSkills();
     }
 };
 
+/* Evaluate on scroll */
 window.addEventListener("scroll", onScroll);
 
 
@@ -42,27 +46,35 @@ var animationFrame;
 var timer;
 var screenSize = [window.outerWidth, window.outerHeight];
 
+/* Resize canvas to container width */
 function sizeToFit() {
-    canvas = document.getElementById("skillsCanvas");
     var parent = document.getElementById("skills");
     canvas.width = parent.offsetWidth;
     canvas.height = parent.offsetHeight;
 }
+/* When loaded, list skills and animate */
 window.onload = function() {
+	// Resize
     canvas = document.getElementById("skillsCanvas");
+    ctx = canvas.getContext('2d');
     canvas.style.opacity = '0';
-    pauseAnimation();
+    pauseSkillsAnimation();
     sizeToFit();
+
+    // Construct skills objects
     loadSkills();
+
+    // Animate
     if (timer) {
         clearTimeout(timer);
     }
     timer = setTimeout(function() {
         canvas.style.opacity = '1';
-        animate();
+        animateSkills();
     }, 1000);
 };
 window.onresize = function() {
+	// Safari iPhone bars fix
     if (window.outerWidth != screenSize[0] || window.outerHeight != screenSize[1]) {
         screenSize[0] = window.outerWidth;
         screenSize[1] = window.outerHeight;
@@ -70,65 +82,77 @@ window.onresize = function() {
         window.onload();
     }
 }
+/* Mobile support */
 window.addEventListener("orientationchange", function() {
     window.onload();
 }, false);
 
+/* Converts data into visual objects */
 function loadSkills() {
+	// Empty list
     while (skills.length > 0) {
         skills.pop();
     }
+    // Create each object from data
     skillList.forEach(function(skill) {
         addSkill(skill);
     });
 }
 
+/* Bubble type, size */
 var SkillType = Object.freeze({ BIG: 1, MEDIUM: 2, SMALL: 3});
 
+/* Skill Constructor */
 function addSkill(skill) {
-    canvas = document.getElementById("skillsCanvas");
-    ctx = canvas.getContext('2d');
-    
-    var name = skill[0],
-        type = skill[1],
-        velocity = (type == SkillType.BIG) ? 0.1 : ((type == SkillType.MEDIUM) ? 0.3 : 0.5);
-        radius = (type == SkillType.BIG) ? 60 : ((type == SkillType.MEDIUM) ? 40 : 25);
+    var name     = skill[0],
+        type     = skill[1],
+        fontSize = skill[2],
+        velocity = (type == SkillType.BIG) ? 0.15 : ((type == SkillType.MEDIUM) ? 0.3 : 0.5);
+        radius   = (type == SkillType.BIG) ? 60 : ((type == SkillType.MEDIUM) ? 40 : 28);
     
     var x = radius,
         y = radius;
+
+    var rand = Math.random();
+    var sign = (rand > 0.5) ? 1 : -1;
     
     var newSkill = {
         x: x,
         y: y,
         vx: velocity,
-        vy: velocity * Math.random(),
+        vy: velocity * rand * sign,
         radius: radius,
-        color: 'white',
+        name: name,
         draw: function() {
+        	/* Draw circle */
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, 2*Math.PI);
             ctx.closePath();
-            ctx.fillStyle = this.color;
+            ctx.fillStyle = 'white';
             ctx.fill();
+
+        	/* Draw text */
+			ctx.font = fontSize + "px 'SFMono-Regular', 'SF Mono', 'Inconsolata', Monaco, 'Lucida Console', monospace";
+            ctx.fillStyle = "#777";
+			ctx.fillText(name, this.x, this.y);
         }
     };
     
-    var alone = true;
+    /* Set skill first position on canvas, where's nothing else */
+    var alone;
     var watchdog = 0;
     do {
         alone = true;
+        /* Check with skill to verifiy it's not covering any */
         for (var i = 0 ; i < skills.length && alone ; i++) {
             var otherSkill = skills[i];
             if (isColliding(newSkill, otherSkill)) {
+            	/* Overlapping: choosing another position */
+                newSkill.x = Math.floor(Math.random() * canvas.width);
+                newSkill.y = Math.floor(Math.random() * canvas.height);
+
+            	/* We'll check this new position */
                 alone = false;
-                newSkill.x = Math.floor((Math.random() * canvas.width) + 1);
-                newSkill.y = Math.floor((Math.random() * canvas.height) + 1);
-                if (isOutsideX(newSkill)) {
-                    newSkill.x = newSkill.radius;
-                }
-                if (isOutsideY(newSkill)) {
-                    newSkill.y = newSkill.radius;
-                }
             }
         }
         watchdog++;
@@ -137,6 +161,7 @@ function addSkill(skill) {
     skills.push(newSkill);
 }
 
+/* Returns if 2 bubbles are too close to each other */
 function isColliding(skill1, skill2) {
     var radiiSum = skill1.radius + skill2.radius;
     var xDiff = skill1.x - skill2.x;
@@ -146,30 +171,31 @@ function isColliding(skill1, skill2) {
     return (centerDist <= radiiSum);
 }
 
+/* Returns if a bubble is outside canvas horizontally */
 function isOutsideX(skill) {
-    canvas = document.getElementById("skillsCanvas");
     return (skill.x <= 0 || skill.x >= canvas.width);
 }
 
+/* Returns if a bubble is outside canvas vertically */
 function isOutsideY(skill) {
-    canvas = document.getElementById("skillsCanvas");
     return (skill.y <= 0 || skill.y >= canvas.height);
 }
 
+/* Draw loop */
 function draw() {
-    canvas = document.getElementById("skillsCanvas");
-    ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     skills.forEach(function(skill, index) {
+    	/* Draw and move */
         skill.draw();
         skill.x += skill.vx;
         skill.y += skill.vy;
         
-        /* Combine every skill without repetition to find out if collision */
+        /* Combine every skill (without repetition) to find out if there's a collision */
         for (var i = index + 1 ; i < skills.length ; i++) {
             var otherSkill = skills[i];
             if (isColliding(skill, otherSkill)) {
+            	/* Bounce */
                 skill.vy = -skill.vy;
                 skill.vx = -skill.vx;
                 otherSkill.vy = -otherSkill.vy;
@@ -187,7 +213,8 @@ function draw() {
     });
 }
 
-function pauseAnimation() {
+/* Pause Skills Canvas animation */
+function pauseSkillsAnimation() {
     if (animation) {
         clearInterval(animation);
     }
@@ -197,11 +224,18 @@ function pauseAnimation() {
     }
 }
 
-function animate() {
-    pauseAnimation();
+/* Start Skills Canvas animation */
+function animateSkills() {
+	// Make sure there's only one loop
+    pauseSkillsAnimation();
+    if (!canvas || !ctx)
+    	return;
+
+    ctx.textAlign = "center";
+	ctx.textBaseline = "middle";
     animation = setInterval(function() {
         animationFrame = window.requestAnimationFrame(draw);
-    }, 20);
+    }, 100);
 }
 
 
@@ -230,6 +264,7 @@ http.onreadystatechange = function() {
         
         if (isNaN(diff) || diff < 0) return;
         
+        /* Prepare user-friendly text */
         var output = "some time ago";
         if (diff < 60) output = "few seconds ago";
         else if (diff < 120) output = "a minute ago";
@@ -248,7 +283,8 @@ http.onreadystatechange = function() {
         document.getElementById("gh-commit-time").textContent = output;
     }
 }
-http.send();
+if (enableExternalSources)
+	http.send();
 
 /* Contributions */
 var http2 = new XMLHttpRequest();
@@ -258,7 +294,8 @@ http2.onreadystatechange = function() {
         document.getElementById("gh-contributions").textContent = http2.responseText;
     }
 }
-http2.send();
+if (enableExternalSources)
+	http2.send();
 
 
 /* TWITTER */
@@ -274,7 +311,8 @@ http3.onreadystatechange = function() {
         }
     }
 }
-http3.send();
+if (enableExternalSources)
+	http3.send();
 
 
 /* PAINTINGS */
