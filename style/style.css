@@ -378,9 +378,41 @@ header td, th {
 
 /* FOOTER */
 
+#footerContacts {
+    padding-top: 15px;
+    text-align: center;
+}
+
+#footerContacts .button {
+    color: white;
+    background: #FF4260;
+    mix-blend-mode: normal;
+}
+
+#footerContacts .button .slash {
+    background: white;
+}
+
+#footerContacts .button:hover {
+    box-shadow: 0px 2px 8px #777;
+}
+
+#footerContacts .button:active {
+    color: #FF4260;
+    background: white;
+}
+
+#footerContacts .button:active .slash {
+    background: #FF4260;
+}
+
+#footerContacts div {
+    display: inline;
+}
+
 footer {
     clear: both;
-    padding: 30px 0 10px 0;
+    padding: 20px 0 10px 0;
     text-align: center;
     color: #A2A2A2;
     font-size: 0.8em;
@@ -463,6 +495,13 @@ footer {
 @media only screen and (max-width: 850px) {
     #skills {
         height: 600px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #footerContacts div {
+        display: block;
+        height: 10px;
     }
 }
 
