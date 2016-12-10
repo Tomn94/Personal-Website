@@ -2,7 +2,12 @@ RewriteEngine On
 
 ErrorDocument 403 /error.php?e=403
 ErrorDocument 404 /error.php?e=404
+ErrorDocument 407 /error.php?e=407
+ErrorDocument 408 /error.php?e=408
 ErrorDocument 500 /error.php?e=500
+ErrorDocument 502 /error.php?e=502
+ErrorDocument 503 /error.php?e=503
+ErrorDocument 504 /error.php?e=504
 
 RewriteRule ^(cv|resume) /Thomas-Naudet-CV.pdf [NC]
 
