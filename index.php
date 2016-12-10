@@ -53,8 +53,10 @@
               </tr>
               <tr>
                   <td data-th="<?=$HEADER_TABLE_HEADERS[0]?>">
-                      <span id="tw-name" style="font-weight: 300;">Young Blood</span><br>
-                      <span id="tw-artist">The Naked and Famous</strong>
+                      <a id="tw-link" title="Search on YouTube" href="https://www.youtube.com/watch?v=0YuSg4mts9E">
+                          <span id="tw-name" style="font-weight: 300;">Young Blood</span><br>
+                          <span id="tw-artist">The Naked and Famous</span>
+                      </a>
                       
                       <div class="hiddenButtons">
                           <?=$HEADER_BUTTONS[0]."\n"?>

@@ -77,6 +77,11 @@ header nav {
     margin: 20px 0px;
 }
 
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
 header #avatar {
     height: 110px;
     width: 110px;

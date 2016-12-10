@@ -308,6 +308,7 @@ http3.onreadystatechange = function() {
             var json = JSON.parse(data);
             document.getElementById("tw-name").textContent = json['name'];
             document.getElementById("tw-artist").textContent = json['artist'];
+            document.getElementById("tw-link").href = "https://www.youtube.com/results?search_query=" + encodeURIComponent(json['name']) + "%20" + encodeURIComponent(json['artist']);
         }
     }
 }
