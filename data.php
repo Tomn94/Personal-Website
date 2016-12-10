@@ -14,7 +14,9 @@ $HEADER_BUTTONS = ['<a class="button" href="https://twitter.com/tomn94">Twitter<
 
 $COUNTRIES = "🇫🇷🇭🇰🇬🇧🇮🇪🇩🇪🇨🇳\n🇨🇿🇧🇪🇱🇺🇮🇹🇬🇷\n🇻🇳🇲🇲🇹🇭🇰🇭🇲🇴🇲🇦";
 
-$NBR_PAINTINGS = iterator_count(new FilesystemIterator('img/paintings/', FilesystemIterator::SKIP_DOTS));
+$NBR_PAINTINGS = [];
+if (file_exists('img/paintings/'))
+  $NBR_PAINTINGS = iterator_count(new FilesystemIterator('img/paintings/', FilesystemIterator::SKIP_DOTS));
 
 $SKILLS = [["iOS", 1, 30, true],
            ["Android", 1, 25, true],

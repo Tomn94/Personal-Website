@@ -1,0 +1,66 @@
+
+@-webkit-keyframes SlideBG {
+    0%{background-position:0% 50%}
+    100%{background-position:100% 50%}
+}
+@-moz-keyframes SlideBG {
+    0%{background-position:0% 50%}
+    100%{background-position:100% 50%}
+}
+@keyframes SlideBG { 
+    0%{background-position:0% 50%}
+    100%{background-position:100% 50%}
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", "Roboto", "Ubuntu", Arial, sans-serif;
+    font-weight: 300;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: white;
+    background-color: #FF4260;
+    background: linear-gradient(108deg, #FF3431 0%, #FFBD41 8.3%, #8FCB3F 16.6%, #00E5FF 25%, #3277FF 33.3%, #FB67FF 41.6%, #FF3431 50%, #FFBD41 58.3%, #8FCB3F 66.6%, #00E5FF 75%, #3277FF 83.3%, #FB67FF 91.6%, #FF3431 100%);
+    background-size: 1000% 200%;
+    animation: SlideBG 90s linear infinite alternate;
+    transform: translateZ(0);   /* Use GPU optimization */
+    height: 100%;
+}
+
+div {
+    position: relative;
+    top: 30%;
+}
+
+h1 {
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+a span {
+    position: relative;
+    left: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+a:hover span {
+    left: -7px;
+}
+
+a:hover {
+    color: #555;
+}
+
+p {
+    padding-bottom:50px;
+    opacity:0.7;
+}

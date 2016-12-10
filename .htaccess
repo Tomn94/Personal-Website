@@ -1,0 +1,12 @@
+RewriteEngine On
+
+ErrorDocument 403 /error.php?e=403
+ErrorDocument 404 /error.php?e=404
+ErrorDocument 500 /error.php?e=500
+
+RewriteRule ^(cv|resume) /Thomas-Naudet-CV.pdf [NC]
+
+<FilesMatch "\.json$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
