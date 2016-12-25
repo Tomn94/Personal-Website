@@ -141,7 +141,7 @@
                           } else {
                   ?>
 
-                      <img src="<?=$img?>" title="<?php
+                      <img src="<?=$img?>" id="<?=$project["id"]?>" title="<?php
                         echo $project["title"];
                         if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;';
                         if ($project["title"] == 'DigiSheep') echo '" style="max-width: 36%;';
