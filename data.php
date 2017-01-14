@@ -87,7 +87,7 @@ $PROJECTS =
          "id"      => "aqc",
          "details" => "Team work to build a complete Embedded System for aquatic ecosystems automation.<br>Developed an Android app communicating with a Raspberry Pi.",
          "imgs"    => ["img/projects/telco.jpg"],
-         "links"   => []],
+         "links"   => [["Including with Rémy Salim", "https://github.com/RemySphere"]]],
          
         ["title"   => "CLAAS Tractor",
          "id"      => "claas",
