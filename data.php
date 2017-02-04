@@ -82,21 +82,22 @@ $PROJECTS =
                        ["Download on Google Play", "http://tramigoapp.com"],
                        ["Download on the Windows Store", "http://tramigoapp.com"]]]
     ],
-    
+
     [
         ["title"   => "AqC TelCo",
          "id"      => "aqc",
          "details" => "Team work to build a complete Embedded System for aquatic ecosystems automation.<br>Developed an Android app communicating with a Raspberry Pi.",
          "imgs"    => ["img/projects/telco.jpg"],
-         "links"   => [["Including with Rémy Salim", "https://github.com/RemySphere"]]],
-         
+         "links"   => [["Worked with Rémy Salim", "https://github.com/RemySphere"],
+                       ["View on GitHub", "https://github.com/Tomn94/AqC-TelCo"]]],
+
         ["title"   => "CLAAS Tractor",
          "id"      => "claas",
          "details" => "Internship, worked with Qt embedded on Linux and CAN networks.",
          "imgs"    => ["img/projects/claas.jpg"],
          "links"   => []]
     ],
-    
+
     [
         ["title"   => "Subtle Subtitles",
          "id"      => "subtlesubtitles",
@@ -105,7 +106,7 @@ $PROJECTS =
          "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1099663304?pt=104224803&ct=Site%20perso&mt=8"],
                        ["View on GitHub", "https://github.com/Tomn94/Subtle-Subtitles"]]]
     ],
-    
+
     [
         ["title"   => "Students’ Union app",
          "id"      => "bdeeseo",
@@ -114,7 +115,7 @@ $PROJECTS =
          "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id966385182?pt=104224803&ct=Site%20perso&mt=8"],
                        ["View on GitHub", "https://github.com/Tomn94/BDE-ESEO"]]]
     ],
-    
+
     [
         ["title"   => "ESEOmega.fr",
          "id"      => "eseomega",
@@ -122,7 +123,7 @@ $PROJECTS =
          "imgs"    => ["img/projects/eseomega.png"],
          "links"   => [["Visit website", "http://eseomega.fr"],
                        ["With Alexis Louis", "https://github.com/wimacod"]]],
-         
+
         ["title"   => "Blue Moon 2016",
          "id"      => "bluemoon",
          "details" => "Website to promote and sell tickets for our event welcoming 2,700 students.<br>Featured Kavinsky, Jay Style, Natty Rico, and Dustycloud.",
@@ -130,7 +131,7 @@ $PROJECTS =
          "links"   => [["Visit website", "http://bluemoon.eseomega.fr"],
                        ["With Sonasi Katoa", "https://github.com/Snooze986"]]]
     ],
-    
+
     [
         ["title"   => "Associations’ Portal",
          "id"      => "portal",
@@ -140,7 +141,7 @@ $PROJECTS =
                        ["View on GitHub", "https://github.com/Tomn94/Portail-Vie-Asso-ESEO"],
                        ["With Sonasi Katoa", "https://github.com/Snooze986"],
                        ["With François Leparoux", "https://github.com/rascafr"]]],
-         
+
         ["title"   => "DigiSheep",
          "id"      => "digisheep",
          "details" => "System to sell/buy tickets (including online), and then scan to grant access on-site.<br>&nbsp;<br>Includes a website to manage data and check stats.<br>&nbsp;<br>Used to manage one event with 2,700 participants.<br>&nbsp;<br>Tied to BDE ESEO API and the Portal.",
@@ -149,7 +150,7 @@ $PROJECTS =
                        ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1084746837?pt=104224803&ct=Site%20perso&mt=8"],
                        ["View on GitHub", "https://github.com/Tomn94/DigiSheep"]]]
     ],
-    
+
     [
         ["title"   => "Campaign app",
          "id"      => "campaignapp",
@@ -157,13 +158,13 @@ $PROJECTS =
          "imgs"    => ["img/projects/campaignapp.jpg"],
          "links"   => [["View on GitHub", "https://github.com/Tomn94/Campagne-ESEOmega"],
                        ["Android &amp; Photo ©&nbsp;François&nbsp;Leparoux", "https://github.com/rascafr"]]],
-         
+
         ["title"   => "Campaign website",
          "id"      => "campaignweb",
          "details" => "Website and API accompanying the app.<br>You should have seen the parallax effect and the opening animation!",
          "imgs"    => ["img/projects/campaignweb.png"],
          "links"   => [["View on GitHub", "https://github.com/Tomn94/Campagne-ESEOmega.fr"]]],
-         
+
         ["title"   => "MATLABit",
          "id"      => "matlabit",
          "details" => "First app in Swift including a Fruit Ninja, a Tinder-like game and many funny useless features.<br>Enjoyed by students at the 2016 campaign.",
@@ -171,7 +172,7 @@ $PROJECTS =
          "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1102827778?pt=104224803&ct=Site%20perso&mt=8"],
                        ["View on GitHub", "https://github.com/Tomn94/MATLABit"]]]
     ],
-    
+
     [
         ["title"   => "@tomn_ebooks<br>@tomn_music",
          "id"      => "twitterbots",
@@ -181,14 +182,14 @@ $PROJECTS =
                        ["View @tomn_ebooks on&nbsp;GitHub", "https://github.com/Tomn94/ebooks_example"],
                        ["View @tomn_music on&nbsp;Twitter", "https://twitter.com/tomn_music"],],
          "inline"  => true],
-         
+
         ["title"   => "Music Tweet",
          "id"      => "musictweet",
          "details" => "Simple app for iOS to share on Twitter the music from any app being currently played, including the artist and the album artwork.",
          "imgs"    => ["img/projects/musictweet.png"],
          "links"   => [["View on GitHub", "https://github.com/Tomn94/Music-Tweet"]],
          "inline"  => true],
-         
+
         ["title"   => "Misc-Tools",
          "id"      => "misctools",
          "details" => "LaTeX base for documents, Apple Scripts…",
@@ -196,29 +197,29 @@ $PROJECTS =
          "links"   => [["View on GitHub", "https://github.com/Tomn94/Misc-Tools"]],
          "inline"  => true]
     ],
-    
+
     "// Deprecated projects",
-    
+
     [
         ["title"   => "uSurf",
          "id"      => "usurf",
          "details" => "Ultra customizable and cross-platform browser with a modern user interface (CoverFlow history, animations…).<br>Based on Webkit, respects Internet standards and, consistent with each OS.",
          "imgs"    => ["img/projects/usurf.jpg"],
          "links"   => []],
-         
+
         ["title"   => "∞Crypt",
          "id"      => "∞crypt",
          "details" => "Encrypt &amp; decrypt your files and texts with secure algorithms, in an innovative way thanks to plug-ins.<br>∞Crypt Files &amp; ∞Crypt Text are cross-platform desktop apps.",
          "imgs"    => ["img/projects/infinicryptfiles.png", "img/projects/infinicrypttext.png"],
          "links"   => []],
-         
+
         ["title"   => "Tunnel Runners",
          "id"      => "tunnelrunners",
          "details" => "Multiplayer high-speed races and fights between vehicles in a tunnel.<br>Create your own tracks &amp; play with your friends.",
          "imgs"    => ["img/projects/tunnelrunners.png"],
          "links"   => [],
          "inline"  => true],
-         
+
         ["title"   => "Mario",
          "id"      => "mario",
          "details" => "<em>Mario &amp; Luigi: Yoshis' Cookies Story</em> is a 2D Mario adventure gathering most of the characters from Mario games.",
@@ -226,7 +227,7 @@ $PROJECTS =
          "links"   => [],
          "inline"  => true]
     ],
-    
+
     [
         ["title"   => "Network Chat",
          "id"      => "networkchat",
@@ -234,21 +235,21 @@ $PROJECTS =
          "imgs"    => ["img/projects/netchat.png"],
          "links"   => [],
          "inline"  => true],
-         
+
         ["title"   => "DevCrew",
          "id"      => "devcrew",
          "details" => "Website for a team of developers I was a member.",
          "imgs"    => ["img/projects/devcrew.jpg"],
          "links"   => [],
          "inline"  => true],
-         
+
         ["title"   => "DelDots",
          "id"      => "deldots",
          "details" => "Deletes every macOS hidden file (used by Spotlight) in a given folder.",
          "imgs"    => ["img/projects/deldots.png"],
          "links"   => [],
          "inline"  => true],
-         
+
         ["title"   => "InstaTP",
          "id"      => "instatp",
          "details" => "Specific program: assembles C files into a single smart C file.",
@@ -256,7 +257,7 @@ $PROJECTS =
          "links"   => [],
          "inline"  => true]
     ],
-    
+
     [
         ["title"   => "BaggIt",
          "id"      => "baggit",
@@ -264,14 +265,14 @@ $PROJECTS =
          "imgs"    => ["img/projects/baggit.jpg"],
          "links"   => [],
          "inline"  => true],
-         
+
         ["title"   => "Cortexis",
          "id"      => "cortexis",
          "details" => "Rich platform for schools (mail, forums, sharing tools…).",
          "imgs"    => ["img/projects/cortexis.jpg"],
          "links"   => [],
          "inline"  => true],
-         
+
         ["title"   => "Charity Dance",
          "id"      => "bal",
          "details" => "List of user-submitted songs in order to contribute to a ball.",
