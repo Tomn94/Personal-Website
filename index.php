@@ -150,7 +150,7 @@
                        } ?>
 
                       <br>
-                      <h2><?=$project["title"]?></h2>
+                      <h2><?=$project["title"]?><span>&nbsp;&nbsp;<?=$project["date"]?></span></h2>
                       <p><?=$project["details"]?></p>
 <?php
                         foreach ($project["links"] as $linkInfo) {
