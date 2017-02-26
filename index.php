@@ -190,7 +190,7 @@
           <a class="button" href="mailto:t%6d%6E%73%74%75%64%69%6Fs%40%68%6ft%6d%61%69%6C%2e%66%72">Mail</a>
           <a class="button" href="https://linkedin.com/in/tomn94">LinkedIn</a>
           <a class="button" href="Thomas-Naudet-CV.pdf">CV&nbsp;<span class="slash"></span>&nbsp;&nbsp;Résumé</a><div>&nbsp;</div>
-          <?php foreach ($HEADER_BUTTONS as $button) echo $button; ?>
+          <?php for ($i = count($HEADER_BUTTONS) - 1 ; $i >= 0 ; $i--) echo $HEADER_BUTTONS[$i]; ?>
       </nav>
       
       <footer class="letterpress">&copy; <?=$DATE_LAST_CHANGE?><br>
