@@ -273,21 +273,23 @@ $PROJECTS =
          "links"   => [],
          "inline"  => true],
 
-        ["title"   => "DelDots",
-         "id"      => "deldots",
-         "details" => "Deletes every macOS hidden file (used by Spotlight) in a given folder.",
-         "date"    => "2010",
-         "imgs"    => ["img/projects/deldots.png"],
-         "links"   => [],
-         "inline"  => true],
+        [
+          ["title"   => "DelDots",
+           "id"      => "deldots",
+           "details" => "Deletes macOS hidden files.",
+           "date"    => "2010",
+           "imgs"    => ["img/projects/deldots.png"],
+           "links"   => [],
+           "inline"  => true],
 
-        ["title"   => "InstaTP",
-         "id"      => "instatp",
-         "details" => "Specific program: assembles C files into a single smart C file.",
-         "date"    => "2012",
-         "imgs"    => ["img/projects/tp.jpg"],
-         "links"   => [],
-         "inline"  => true]
+          ["title"   => "InstaTP",
+           "id"      => "instatp",
+           "details" => "Concatenates C files.",
+           "date"    => "2012",
+           "imgs"    => ["img/projects/tp.jpg"],
+           "links"   => [],
+           "inline"  => true]
+        ]
     ],
 
     [
