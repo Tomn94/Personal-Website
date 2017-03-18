@@ -121,7 +121,17 @@
           <table>
               <tr>
 <?php
-                    foreach ($projectsRow as $project) {
+                  foreach ($projectsRow as $someProject) {
+                    
+                    // If it's not an array, just a standard project
+                    $isAssoc = $someProject !== array() && array_keys($someProject) !== range(0, count($someProject) - 1);
+                    if ($isAssoc) {
+                      $project = $someProject;
+                    } else {
+                      $subProjNum = 0;
+                      $project = $someProject[$subProjNum];
+                    }
+
                        echo '                  <td';
                        if (count($projectsRow) == 1 || (isset($project["inline"]) && $project["inline"])) {
                            echo ' class="';
@@ -130,6 +140,17 @@
                            echo '"';
                        }
                        echo '>';
+
+                    do {
+                      if (!$isAssoc) {
+                        $project = $someProject[$subProjNum];
+                        $subProjNum++;
+                      }
+                      echo '<div class="projectWrapper"';
+                      if ($subProjNum > 1) {
+                        echo ' style="padding-top: 20px"';
+                      }
+                      echo '>';
                        foreach ($project["imgs"] as $img) {
                           if (strpos($img, '.mp4') !== false) {
                   ?>
@@ -156,9 +177,11 @@
                         foreach ($project["links"] as $linkInfo) {
                     ?>
                       <a href="<?=$linkInfo[1]?>"><?=$linkInfo[0]?>&nbsp;<span>›</span></a>
-<?php                   } ?>
+<?php                   }
+                      echo '</div>';
+                    } while (!$isAssoc && $subProjNum < count($someProject)); ?>
                   </td>
-<?php               } ?>
+<?php             } ?>
               </tr>
           </table>
 <?php
