@@ -249,6 +249,14 @@ $PROJECTS =
     ],
 
     [
+        ["title"   => "Lexicos",
+         "id"      => "lexicos",
+         "details" => "Website to help my friends learn English in Secondary School.",
+         "date"    => "2007",
+         "imgs"    => ["img/projects/lexicos.png"],
+         "links"   => [],
+         "inline"  => true],
+
         ["title"   => "Network Chat",
          "id"      => "networkchat",
          "details" => "Client &amp; server multi-platform chat on a local network.<br>Inconspicuous user interface, file transferts, chat commands…",
