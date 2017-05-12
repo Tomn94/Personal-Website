@@ -86,6 +86,17 @@ $PROJECTS =
     ],
 
     [
+        ["title"   => "Apple WWDC’17 Scholarship Winner",
+         "id"      => "wwdc",
+         "details" => "Swift Playgrounds Book introducing myself for Apple Worldwide Developers Conference 2017 Scholarship.<br>&nbsp;</br>Selected among 350 students in the world, I was indeed invited to attend the week of conferences among 5,000 engineers and developers.<br>&nbsp;</br>The Playgrounds Book is interactive: you can play with the Swift code on the left, and experience the result on the right.",
+         "date"    => "Spring 2017",
+         "imgs"    => ["img/projects/wwdc.png"],
+         "links"   => [["View &amp; Download on GitHub", "https://github.com/Tomn94/WWDC-2017-Scholarship"],
+                       ["Preview on YouTube", "https://youtu.be/w5SfOVPmK_U"],
+                       ["What’s WWDC?", "https://wwdc.apple.com"]]]
+    ],
+
+    [
         ["title"   => "AqC TelCo",
          "id"      => "aqc",
          "details" => "Team work to build a complete Embedded System for aquatic ecosystems automation.<br>Developed an Android app communicating with a Raspberry Pi.",
