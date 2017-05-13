@@ -1,4 +1,5 @@
 var enableExternalSources = true;		// enable GitHub, Twitter, …
+var mobileWidth = 735;
 
 /* Stop header from animating */
 function toggleHeaderAnimation(on) {
@@ -9,7 +10,7 @@ function toggleHeaderAnimation(on) {
     } else {
         style.webkitAnimationPlayState = 'paused';
         document.body.className = 'paused';
-    }      
+    }
 }
 
 var onScroll = function(evt) {
@@ -37,6 +38,74 @@ var onScroll = function(evt) {
 window.addEventListener("scroll", onScroll);
 
 
+/* EMBEDDED YouTube VIDEOS */
+function playVideo() {
+    /* Get associated still */
+    var img = document.getElementById('wwdc');
+    img.style.filter = "";
+
+    var playButton = document.getElementById('play-wwdc');
+    playButton.style.display = "none";
+
+    var embedded = document.createElement("iframe");
+    embedded.id = "embedded-wwdc";
+    embedded.src = "https://www.youtube-nocookie.com/embed/w5SfOVPmK_U?rel=0&amp;showinfo=0&amp;autoplay=1";
+    embedded.frameborder = "0";
+    embedded.setAttribute("allowfullscreen", "");
+    embedded.style.float = (window.innerWidth > mobileWidth) ? "left" : "";
+    embedded.width = img.clientWidth;
+    embedded.height = img.clientHeight;
+    embedded.style.marginTop = (-img.clientHeight) + "px";
+    embedded.style.position = "relative";
+    embedded.style.top = ((window.innerWidth > mobileWidth) ? 0 : -25) + "px";
+
+    img.parentNode.insertBefore(embedded, img.nextSibling);
+}
+
+var videoDisplayed = false;
+function displayVideos() {
+
+    if (videoDisplayed) {
+        /* This is called when resizing the window */
+        var img = document.getElementById('wwdc');
+
+        var playButton = document.getElementById('play-wwdc')
+        playButton.style.top = ((((window.innerWidth > mobileWidth) ? 1 : -1) * img.clientHeight) - 100) / 2 + "px";
+        playButton.style.left = (img.clientWidth - 100) / 2 + "px";
+
+        var embedded = document.getElementById('embedded-wwdc')
+        if (embedded) {
+            embedded.style.float = (window.innerWidth > mobileWidth ? "left" : "");
+            embedded.width = img.clientWidth;
+            embedded.height = img.clientHeight;
+            embedded.style.marginTop = (-img.clientHeight) + "px";
+            embedded.style.top = ((window.innerWidth > mobileWidth) ? 0 : -25) + "px";
+        }
+
+        return;
+    }
+    /* The following is called when after page load */
+
+    /* Get associated still */
+    var img = document.getElementById('wwdc');
+    img.style.filter = "brightness(80%) blur(1px)";
+    img.onclick = playVideo;
+    img.style.cursor = "pointer";
+
+    /* Add button */
+    var playButton = document.createElement("div");
+    playButton.id = "play-wwdc";
+    playButton.title = "Play Video";
+    playButton.className = "playButton";
+    playButton.onclick = playVideo;
+    playButton.style.top = ((((window.innerWidth > mobileWidth) ? 1 : -1) * img.clientHeight) - 100) / 2 + "px";
+    playButton.style.left = (img.clientWidth - 100) / 2 + "px";
+    img.parentNode.insertBefore(playButton, img.nextSibling);
+
+    videoDisplayed = true;
+}
+
+
 /* CANVAS */
 var canvas;
 var ctx;
@@ -54,6 +123,10 @@ function sizeToFit() {
 }
 /* When loaded, list skills and animate */
 window.onload = function() {
+    /* VIDEOS */
+    displayVideos();
+
+    /* SKILLS */
 	// Resize
     canvas = document.getElementById("skillsCanvas");
     ctx = canvas.getContext('2d');

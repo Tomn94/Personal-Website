@@ -386,6 +386,34 @@ header td, th {
     transition: 1s opacity ease-in;
 }
 
+.playButton {
+    display: block;
+    position: relative;
+    z-index: 10;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: url('../img/play.png') rgba(0, 0, 0, 0.42);
+    background-size: 50px;
+    background-position: 31px center;
+    background-repeat: no-repeat;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 4px black;
+    margin-bottom: -100px;
+    transition: 0.2s transform ease-in;
+    cursor: pointer;
+}
+
+.playButton:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.playButton:active {
+    transform: scale(1.1, 1.1);
+    background-color: rgba(255, 255, 255, 0.42);
+}
+
 
 /* FOOTER */
 
