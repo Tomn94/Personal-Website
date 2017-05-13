@@ -405,7 +405,7 @@ header td, th {
     cursor: pointer;
 }
 
-.playButton:hover {
+.playButton:hover, #projects img:hover ~ .playButton {
     transform: scale(1.1, 1.1);
 }
 
