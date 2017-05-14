@@ -18,13 +18,13 @@ var onScroll = function(evt) {
     var doc = document.documentElement;
     var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
     var height = 60 + document.getElementsByTagName("header")[0].clientHeight;
-    
+
     if (top > height && document.body.className != 'paused') {
         toggleHeaderAnimation(false);
     } else if (top < height && document.body.className == 'paused') {
         toggleHeaderAnimation(true);
     }
-    
+
     /* Check if skills are visible */
     var heightSkills = height + document.getElementById("skills").clientHeight;
     if (top > heightSkills) {
@@ -50,11 +50,11 @@ function playVideo() {
     var embedded = document.createElement("iframe");
     embedded.id = "embedded-wwdc";
     embedded.src = "https://www.youtube-nocookie.com/embed/w5SfOVPmK_U?rel=0&amp;showinfo=0&amp;autoplay=1";
-    embedded.frameborder = "0";
+    embedded.setAttribute("frameborder", "0");
     embedded.setAttribute("allowfullscreen", "");
     embedded.style.float = (window.innerWidth > mobileWidth) ? "left" : "";
     embedded.width = img.clientWidth;
-    embedded.height = img.clientHeight;
+    embedded.height = img.clientHeight + 1;
     embedded.style.marginTop = (-img.clientHeight) + "px";
     embedded.style.position = "relative";
     embedded.style.top = ((window.innerWidth > mobileWidth) ? 0 : -25) + "px";
@@ -77,7 +77,7 @@ function displayVideos() {
         if (embedded) {
             embedded.style.float = (window.innerWidth > mobileWidth ? "left" : "");
             embedded.width = img.clientWidth;
-            embedded.height = img.clientHeight;
+            embedded.height = img.clientHeight + 1;
             embedded.style.marginTop = (-img.clientHeight) + "px";
             embedded.style.top = ((window.innerWidth > mobileWidth) ? 0 : -25) + "px";
         }
@@ -151,7 +151,7 @@ window.onresize = function() {
     if (window.outerWidth != screenSize[0] || window.outerHeight != screenSize[1]) {
         screenSize[0] = window.outerWidth;
         screenSize[1] = window.outerHeight;
-        
+
         window.onload();
     }
 }
@@ -182,13 +182,13 @@ function addSkill(skill) {
         fontSize = skill[2],
         velocity = (type == SkillType.BIG) ? 0.15 : ((type == SkillType.MEDIUM) ? 0.3 : 0.5);
         radius   = (type == SkillType.BIG) ? 60 : ((type == SkillType.MEDIUM) ? 40 : 28);
-    
+
     var x = radius,
         y = radius;
 
     var rand = Math.random();
     var sign = (rand > 0.5) ? 1 : -1;
-    
+
     var newSkill = {
         x: x,
         y: y,
@@ -210,7 +210,7 @@ function addSkill(skill) {
 			ctx.fillText(name, this.x, this.y);
         }
     };
-    
+
     /* Set skill first position on canvas, where's nothing else */
     var alone;
     var watchdog = 0;
@@ -230,7 +230,7 @@ function addSkill(skill) {
         }
         watchdog++;
     } while (!alone && watchdog < 100);
-    
+
     skills.push(newSkill);
 }
 
@@ -240,7 +240,7 @@ function isColliding(skill1, skill2) {
     var xDiff = skill1.x - skill2.x;
     var yDiff = skill1.y - skill2.y;
     var centerDist = Math.floor(Math.sqrt((xDiff * xDiff) + (yDiff * yDiff)));
-    
+
     return (centerDist <= radiiSum);
 }
 
@@ -257,13 +257,13 @@ function isOutsideY(skill) {
 /* Draw loop */
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+
     skills.forEach(function(skill, index) {
     	/* Draw and move */
         skill.draw();
         skill.x += skill.vx;
         skill.y += skill.vy;
-        
+
         /* Combine every skill (without repetition) to find out if there's a collision */
         for (var i = index + 1 ; i < skills.length ; i++) {
             var otherSkill = skills[i];
@@ -275,7 +275,7 @@ function draw() {
                 otherSkill.vx = -otherSkill.vx;
             }
         }
-        
+
         /* Border collision */
         if (isOutsideX(skill)) {
             skill.vx = -skill.vx;
@@ -322,21 +322,21 @@ http.onreadystatechange = function() {
         /* Get repositories */
         var json = JSON.parse(http.responseText);
         var nbrRepos = json.length;
-        
+
         /* Get last commit date for each */
         var pushes = [];
         for (var i = 0 ; i < nbrRepos ; i++) {
             pushes.push(json[i]['pushed_at']);
         }
-        
+
         /* Get the more recent one and compute relative date */
         pushes.sort();
         var lastPush = pushes[pushes.length - 1];
         var date = new Date(lastPush);
         var diff = (new Date().getTime() - date.getTime()) / 1000;
-        
+
         if (isNaN(diff) || diff < 0) return;
-        
+
         /* Prepare user-friendly text */
         var output = "some time ago";
         if (diff < 60) output = "few seconds ago";
@@ -350,7 +350,7 @@ http.onreadystatechange = function() {
             else if (dayDiff < 7) output = dayDiff + " days ago";
             else output = Math.round(dayDiff / 7) + " weeks ago";
         }
-        
+
         /* Show data */
         document.getElementById("gh-repos").textContent = nbrRepos;
         document.getElementById("gh-commit-time").textContent = output;
@@ -398,14 +398,14 @@ var lastPaintChange = 0;    // time last pic change occured
 function changePainting() {
     var paintings = document.getElementsByName("painting");
     var currentTime = (new Date()).getTime();
-    
+
     /* HTML loaded and not clicked just before */
     if (paintings.length > 0 && (currentTime - lastPaintChange) / 1000 > 1) {
         /* Change pic */
         paintings[currentPaintIndex].style.opacity = "0";
         currentPaintIndex = (currentPaintIndex + 1) % paintings.length;
         paintings[currentPaintIndex].style.opacity = "1";
-        
+
         /* Reset time */
         lastPaintChange = currentTime;
         clearInterval(paintingRepeat);
