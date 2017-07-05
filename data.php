@@ -92,7 +92,8 @@ $PROJECTS =
          "date"    => "Spring 2017",
          "imgs"    => ["img/projects/wwdc.png"],
          "links"   => [["View &amp; Download on GitHub", "https://github.com/Tomn94/WWDC-2017-Scholarship"],
-                       ["Preview on YouTube", "https://youtu.be/w5SfOVPmK_U"],
+                       ["Watch the Video of my Trip", "https://youtu.be/SdwoDK-1kF0"],
+                       ["Preview Book on YouTube", "https://youtu.be/w5SfOVPmK_U"],
                        ["What’s WWDC?", "https://wwdc.apple.com"]]]
     ],
 
