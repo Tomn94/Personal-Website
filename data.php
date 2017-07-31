@@ -6,7 +6,7 @@ $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
 $DESCRIPTION = "French Student Engineer+Manager\nPolyglot Developer, Designer…";
 
-$BASE_URL = "http://tomn.tramigoapp.com";
+$BASE_URL = "http://tomn.fr";
 
 $HEADER_TABLE_HEADERS = ["last song I've listened to", "GitHub activity", "countries I've lived in/visited"];
 
@@ -201,7 +201,7 @@ $PROJECTS =
     [
         ["title"   => "@tomn_ebooks<br>@tomn_music",
          "id"      => "twitterbots",
-         "details" => "Me, as a Twitter bot, mixing my tweets.<br>&nbsp;<br>The other account gathers some of my songs playing.",
+         "details" => "Me, as a Twitter bot, mixing my tweets.<br>&nbsp;<br>The other account gathers some of my songs playing.<br>&nbsp;",
          "date"    => "2016 – Now",
          "imgs"    => ["img/projects/ebooks.png"],
          "links"   => [["View @tomn_ebooks on&nbsp;Twitter", "https://twitter.com/tomn_ebooks"],
@@ -211,15 +211,16 @@ $PROJECTS =
 
         ["title"   => "Music Tweet",
          "id"      => "musictweet",
-         "details" => "Simple app for iOS to share on Twitter the music from any app being currently played, including the artist and the album artwork.",
+         "details" => "Simple app for iOS & watchOS to share on Twitter the music being played by any app, including the artist and the album artwork.<br>&nbsp;<br>My very first app for iPhone, and now my first app for Apple Watch.<br>&nbsp;",
          "date"    => "2013 – Now",
          "imgs"    => ["img/projects/musictweet.png"],
-         "links"   => [["View on GitHub", "https://github.com/Tomn94/Music-Tweet"]],
+         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id919336842?pt=104224803&ct=Site%20perso&mt=8"],
+                       ["View on GitHub", "https://github.com/Tomn94/Music-Tweet"]],
          "inline"  => true],
 
         ["title"   => "Misc-Tools",
          "id"      => "misctools",
-         "details" => "LaTeX base for documents, Apple Scripts…",
+         "details" => "Useful Apple Scripts, LaTeX base document, git hooks, IDE configurations, and other coding tools…",
          "date"    => "2016 – Now",
          "imgs"    => ["img/projects/latex.png"],
          "links"   => [["View on GitHub", "https://github.com/Tomn94/Misc-Tools"]],
