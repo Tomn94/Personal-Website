@@ -6,7 +6,7 @@ $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
 $DESCRIPTION = "French Student Engineer+Manager\nPolyglot Developer, Designer…";
 
-$BASE_URL = "http://tomn.fr";
+$BASE_URL = "https://tomn.fr";
 
 $HEADER_TABLE_HEADERS = ["last song I've listened to", "GitHub activity", "countries I've lived in/visited"];
 
