@@ -1,6 +1,6 @@
 <?php
 
-$DATE_LAST_CHANGE = "February 2017";
+$DATE_LAST_CHANGE = "July 2017";
 
 $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
