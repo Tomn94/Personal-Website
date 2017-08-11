@@ -1,6 +1,6 @@
 <?php
 
-$DATE_LAST_CHANGE = "July 2017";
+$DATE_LAST_CHANGE = "August 2017";
 
 $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
@@ -12,7 +12,7 @@ $HEADER_TABLE_HEADERS = ["last song I've listened to", "GitHub activity", "count
 
 $HEADER_BUTTONS = ['<a class="button" href="https://twitter.com/tomn94">Twitter</a>', '<a class="button" href="https://github.com/Tomn94">GitHub</a>'];
 
-$COUNTRIES = "🇫🇷🇭🇰🇬🇧🇮🇪🇩🇪🇨🇳\n🇯🇵🇧🇪🇮🇹🇨🇿🇱🇺🇪🇸🇬🇷\n🇲🇦🇻🇳🇲🇲🇵🇭🇹🇭🇰🇭🇲🇴";
+$COUNTRIES = "🇫🇷🇭🇰🇬🇧🇮🇪🇩🇪🇺🇸🇨🇳\n🇯🇵🇧🇪🇮🇹🇨🇿🇱🇺🇬🇷🇪🇸\n🇲🇦🇻🇳🇲🇲🇵🇭🇹🇭🇲🇴🇰🇭";
 
 $NBR_PAINTINGS = [];
 if (file_exists('img/paintings/'))
@@ -28,6 +28,8 @@ $SKILLS = [["iOS", 1, 30, true],
            ["Qt", 1, 40, true],
            ["Basic", 3, 15, true],
            ["JavaScript", 1, 18, true],
+           ["Node.js", 2, 16, true],
+           ["ES6", 1, 40, true],
            ["Python", 2, 20, true],
            ["PHP", 1, 30, true],
            ["SQL", 1, 30, true],

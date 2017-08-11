@@ -1,7 +1,8 @@
 <?php
     
 function cleanTxtData($str) {
-    $noTags = htmlspecialchars($str);
+    $decode = htmlspecialchars_decode($str);
+    $noTags = strip_tags($decode);
     $noNP = str_replace("#NowPlaying", "", str_replace("#NP", "", str_replace("#NP ▶️", "", $noTags)));
     $noLinks = preg_replace("|https?://([\d\w\.-]+\.[\w\.]{2,6})[^\s\]\[\<\>]*/?|i", "", $noNP);
     $noRT = preg_replace("|RT @[A-Z]+[A-Z0-9]+:|i", "", $noLinks);
