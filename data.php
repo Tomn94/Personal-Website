@@ -73,6 +73,21 @@ $SKILLS = [["iOS", 1, 30, true],
            ["Power/commutation electronics", 2, 30, false],
            ["Signal processing", 2, 30, false]];
 
+/** Available icons for Projects Links */
+abstract class Icon
+{
+    const Team = "team";
+    const Website = "website";
+    const Git = "git";
+    const AppStore = "apple";
+    const PlayStore = "google";
+    const WindowsStore = "windows";
+    const Video = "youtube";
+    const Book = "book";
+    const Twitter = "twitter";
+    const Question = "question";
+}
+
 $PROJECTS =
 [
     [
@@ -82,9 +97,9 @@ $PROJECTS =
          "date"    => "2014 – Now",
          "imgs"    => ["img/projects/tramigo.png"],
          "links"   => [/*["Visit website", "https://tramigoapp.com"],*/
-                       ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8"],
-                       ["Download on Google Play", "https://tramigoapp.com"],
-                       ["Download on the Windows Store", "https://tramigoapp.com"]]]
+                       ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+                       ["Download on Google Play", "https://tramigoapp.com", Icon::PlayStore],
+                       ["Download on the Windows Store", "https://tramigoapp.com", Icon::WindowsStore]]]
     ],
 
     [
@@ -93,10 +108,10 @@ $PROJECTS =
          "details" => "Swift Playgrounds Book introducing myself for Apple Worldwide Developers Conference 2017 Scholarship.<br>&nbsp;</br>Selected with 350 other students in the world, I was indeed invited to attend the week of conferences among 5,000 engineers and developers.<br>&nbsp;</br>The Playgrounds Book is interactive: you can play with the Swift code on the left, and experience the result on the right.",
          "date"    => "Spring 2017",
          "imgs"    => ["img/projects/wwdc.png"],
-         "links"   => [["<strong>Watch the Video of my Trip!</strong>", "https://youtu.be/SdwoDK-1kF0"],
-                       ["View &amp; Download on GitHub", "https://github.com/Tomn94/WWDC-2017-Scholarship"],
-                       ["Preview Book on YouTube", "https://youtu.be/w5SfOVPmK_U"],
-                       ["What’s WWDC?", "https://wwdc.apple.com"]]]
+         "links"   => [["<strong>Watch the Video of my Trip!</strong>", "https://youtu.be/SdwoDK-1kF0", Icon::Video],
+                       ["View &amp; Download on GitHub", "https://github.com/Tomn94/WWDC-2017-Scholarship", Icon::Git],
+                       ["Preview Book on YouTube", "https://youtu.be/w5SfOVPmK_U", Icon::Book],
+                       ["What’s WWDC?", "https://wwdc.apple.com", Icon::Question]]]
     ],
 
     [
@@ -105,12 +120,12 @@ $PROJECTS =
          "details" => "Team work to build a complete Embedded System for aquatic ecosystems automation.<br>Developed an Android app communicating with a Raspberry Pi.",
          "date"    => "Spring 2016",
          "imgs"    => ["img/projects/telco.jpg"],
-         "links"   => [["Worked with Rémy Salim", "https://github.com/RemySphere"],
-                       ["View on GitHub", "https://github.com/Tomn94/AqC-TelCo"]]],
+         "links"   => [["Worked in a team of 8, with Rémy Salim", "https://github.com/RemySphere", Icon::Team],
+                       ["View on GitHub", "https://github.com/Tomn94/AqC-TelCo", Icon::Git]]],
 
         ["title"   => "CLAAS Tractor",
          "id"      => "claas",
-         "details" => "Internship, worked with Qt embedded on Linux and CAN networks.",
+         "details" => "Internship in R&D, worked with Qt embedded on Linux and CAN networks.",
          "date"    => "Summer 2016",
          "imgs"    => ["img/projects/claas.jpg"],
          "links"   => []]
@@ -122,8 +137,8 @@ $PROJECTS =
          "details" => "Subtitle player for movies and TV series:<br>Find, Play, Collect and Share!<br>&nbsp;<br>Thousands of downloads all around the world.",
          "imgs"    => ["img/projects/subtlesubs.png"],
          "date"    => "2016 – Now",
-         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1099663304?pt=104224803&ct=Site%20perso&mt=8"],
-                       ["View on GitHub", "https://github.com/Tomn94/Subtle-Subtitles"]]]
+         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1099663304?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+                       ["View on GitHub", "https://github.com/Tomn94/Subtle-Subtitles", Icon::Git]]]
     ],
 
     [
@@ -132,8 +147,8 @@ $PROJECTS =
          "details" => "Complete iOS app dedicated to students at my Engineering School<br>&nbsp;<br>Gathers news, events, notifications, associations information &amp; contacts, deals, floor plans, file access, games…<br>Includes also a meal-ordering service and a store to buy tickets for events.<br>The app even accepts credit cards.",
          "date"    => "2015 – Now",
          "imgs"    => ["img/projects/bdeeseo.png"],
-         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id966385182?pt=104224803&ct=Site%20perso&mt=8"],
-                       ["View on GitHub", "https://github.com/Tomn94/BDE-ESEO"]]]
+         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id966385182?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+                       ["View on GitHub", "https://github.com/Tomn94/BDE-ESEO", Icon::Git]]]
     ],
 
     [
@@ -142,16 +157,16 @@ $PROJECTS =
          "details" => "Dynamic website for my Students’ Union.<br>&nbsp;<br>Fetches data from the Students’ Union API.",
          "date"    => "Fall 2015",
          "imgs"    => ["img/projects/eseomega.png"],
-         "links"   => [["Visit website", "http://eseomega.fr"],
-                       ["With Alexis Louis", "https://github.com/wimacod"]]],
+         "links"   => [["Visit website", "http://eseomega.fr", Icon::Website],
+                       ["With Alexis Louis", "https://github.com/wimacod", Icon::Team]]],
 
         ["title"   => "Blue Moon",
          "id"      => "bluemoon",
          "details" => "Website to promote and sell tickets for our event welcoming 2,700 students.<br>Featured Kavinsky, Jay Style, Natty Rico, and Dustycloud.",
          "date"    => "Winter 2016",
          "imgs"    => ["img/projects/bluemoon.mp4"],
-         "links"   => [["Visit website", "http://bluemoon.eseomega.fr"],
-                       ["With Sonasi Katoa", "https://github.com/Snooze986"]]]
+         "links"   => [["Visit website", "http://bluemoon.eseomega.fr", Icon::Website],
+                       ["With Sonasi Katoa", "https://github.com/Snooze986", Icon::Team]]]
     ],
 
     [
@@ -160,19 +175,19 @@ $PROJECTS =
          "details" => "Provides an API for all the services in Students’ Union iOS and Android apps.<br>&nbsp;<br>Moreover, the Portal allows associations with their IDs to deliver news, notifications, to send to mailing lists, to edit API data based on level access, and to manage the meal/tickets-ordering systems.<br>&nbsp;<br>A TV with a Raspberry Pi is connected to the Portail to show orders in the kitchen.",
          "date"    => "2015 – Now",
          "imgs"    => ["img/projects/portail.png"],
-         "links"   => [["Visit website", "https://portail.bdeeseo.fr"],
-                       ["View on GitHub", "https://github.com/Tomn94/Portail-Vie-Asso-ESEO"],
-                       ["With Sonasi Katoa", "https://github.com/Snooze986"],
-                       ["With François Leparoux", "https://github.com/rascafr"]]],
+         "links"   => [["Visit website", "https://portail.bdeeseo.fr", Icon::Website],
+                       ["View on GitHub", "https://github.com/Tomn94/Portail-Vie-Asso-ESEO", Icon::Git],
+                       ["With Sonasi Katoa", "https://github.com/Snooze986", Icon::Team],
+                       ["With François Leparoux", "https://github.com/rascafr", Icon::Team]]],
 
         ["title"   => "DigiSheep",
          "id"      => "digisheep",
          "details" => "System to sell/buy tickets (including online), and then scan to grant access on-site.<br>&nbsp;<br>Includes a website to manage data and check stats.<br>&nbsp;<br>Used to manage one event with 2,700 participants.<br>&nbsp;<br>Tied to BDE ESEO API and the Portal.",
          "date"    => "2016 – Now",
          "imgs"    => ["img/projects/digisheep.png", "img/projects/digisheep2.png"],
-         "links"   => [["Visit website", "https://portail.bdeeseo.fr"],
-                       ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1084746837?pt=104224803&ct=Site%20perso&mt=8"],
-                       ["View on GitHub", "https://github.com/Tomn94/DigiSheep"]]]
+         "links"   => [["Visit website", "https://portail.bdeeseo.fr", Icon::Website],
+                       ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1084746837?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+                       ["View on GitHub", "https://github.com/Tomn94/DigiSheep", Icon::Git]]]
     ],
 
     [
@@ -181,23 +196,23 @@ $PROJECTS =
          "details" => "App that made us, ESEOmega, win the 2015 Students’ Union Election.<br>Includes members, events, information, videos, maps, a QR code-scanning game…",
          "date"    => "Spring 2015",
          "imgs"    => ["img/projects/campaignapp.jpg"],
-         "links"   => [["View on GitHub", "https://github.com/Tomn94/Campagne-ESEOmega"],
-                       ["Android &amp; Photo ©&nbsp;François&nbsp;Leparoux", "https://github.com/rascafr"]]],
+         "links"   => [["View on GitHub", "https://github.com/Tomn94/Campagne-ESEOmega", Icon::Git],
+                       ["Android &amp; Photo ©&nbsp;François&nbsp;Leparoux", "https://github.com/rascafr", Icon::Team]]],
 
         ["title"   => "Campaign website",
          "id"      => "campaignweb",
          "details" => "Website and API accompanying the app.<br>You should have seen the parallax effect and the opening animation!",
          "date"    => "Spring 2015",
          "imgs"    => ["img/projects/campaignweb.png"],
-         "links"   => [["View on GitHub", "https://github.com/Tomn94/Campagne-ESEOmega.fr"]]],
+         "links"   => [["View on GitHub", "https://github.com/Tomn94/Campagne-ESEOmega.fr", Icon::Git]]],
 
         ["title"   => "MATLABit",
          "id"      => "matlabit",
          "details" => "First app in Swift including a Fruit Ninja, a Tinder-like game and many funny useless features.<br>Enjoyed by students at the 2016 campaign.",
          "date"    => "Spring 2016",
          "imgs"    => ["img/projects/matlabit.png"],
-         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1102827778?pt=104224803&ct=Site%20perso&mt=8"],
-                       ["View on GitHub", "https://github.com/Tomn94/MATLABit"]]]
+         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1102827778?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+                       ["View on GitHub", "https://github.com/Tomn94/MATLABit", Icon::Git]]]
     ],
 
     [
@@ -206,9 +221,9 @@ $PROJECTS =
          "details" => "Me, as a Twitter bot, mixing my tweets.<br>&nbsp;<br>The other account gathers some of my songs playing.<br>&nbsp;",
          "date"    => "2016 – Now",
          "imgs"    => ["img/projects/ebooks.png"],
-         "links"   => [["View @tomn_ebooks on&nbsp;Twitter", "https://twitter.com/tomn_ebooks"],
-                       ["View @tomn_ebooks on&nbsp;GitHub", "https://github.com/Tomn94/ebooks_example"],
-                       ["View @tomn_music on&nbsp;Twitter", "https://twitter.com/tomn_music"],],
+         "links"   => [["View @tomn_ebooks on&nbsp;Twitter", "https://twitter.com/tomn_ebooks", Icon::Twitter],
+                       ["View @tomn_ebooks on&nbsp;GitHub", "https://github.com/Tomn94/ebooks_example", Icon::Git],
+                       ["View @tomn_music on&nbsp;Twitter", "https://twitter.com/tomn_music", Icon::Twitter]],
          "inline"  => true],
 
         ["title"   => "Music Tweet",
@@ -216,8 +231,8 @@ $PROJECTS =
          "details" => "Simple app for iOS & watchOS to share on Twitter the music being played by any app, including the artist and the album artwork.<br>&nbsp;<br>My very first app for iPhone, and now my first app for Apple Watch.<br>&nbsp;",
          "date"    => "2013 – Now",
          "imgs"    => ["img/projects/musictweet.png"],
-         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id919336842?pt=104224803&ct=Site%20perso&mt=8"],
-                       ["View on GitHub", "https://github.com/Tomn94/Music-Tweet"]],
+         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id919336842?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+                       ["View on GitHub", "https://github.com/Tomn94/Music-Tweet", Icon::Git]],
          "inline"  => true],
 
         ["title"   => "Misc-Tools",
@@ -225,7 +240,7 @@ $PROJECTS =
          "details" => "Useful Apple Scripts, LaTeX base document, git hooks, IDE configurations, and other coding tools…",
          "date"    => "2016 – Now",
          "imgs"    => ["img/projects/latex.png"],
-         "links"   => [["View on GitHub", "https://github.com/Tomn94/Misc-Tools"]],
+         "links"   => [["View on GitHub", "https://github.com/Tomn94/Misc-Tools", Icon::Git]],
          "inline"  => true]
     ],
 

@@ -176,7 +176,7 @@
 <?php
                         foreach ($project["links"] as $linkInfo) {
                     ?>
-                      <a href="<?=$linkInfo[1]?>"><?=$linkInfo[0]?>&nbsp;<span>›</span></a>
+                      <a href="<?=$linkInfo[1]?>"><img class="linkIcon" src="img/icns/<?=$linkInfo[2]?>.png" alt="icon" />&nbsp;<?=$linkInfo[0]?>&nbsp;<span>›</span></a>
 <?php                   }
                       echo '</div>';
                     } while (!$isAssoc && $subProjNum < count($someProject)); ?>
