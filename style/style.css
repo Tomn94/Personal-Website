@@ -304,6 +304,7 @@ header td, th {
     padding-bottom: 5px;
     text-shadow: 0 1px 0 white;
     font-weight: 400;
+    line-height: 1.35;
 }
 
 #projects a span {
@@ -325,13 +326,16 @@ header td, th {
     padding-right: 2px;
     vertical-align: text-bottom;
     height: 20px;
-    opacity: 0.85;
-    transition: none;
+    opacity: 0.8;
     box-shadow: none;
 }
 
 #projects .projectWrapper:hover a img {
     box-shadow: none;
+}
+
+#projects .projectWrapper a:hover img {
+    opacity: 1;
 }
 
 #projects img, #projects video {
