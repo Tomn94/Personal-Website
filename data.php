@@ -125,7 +125,7 @@ $PROJECTS =
 
         ["title"   => "CLAAS Tractor",
          "id"      => "claas",
-         "details" => "Internship in R&D, worked with Qt embedded on Linux and CAN networks.",
+         "details" => "Internship in R&amp;D, worked with Qt embedded on Linux and CAN networks.",
          "date"    => "Summer 2016",
          "imgs"    => ["img/projects/claas.jpg"],
          "links"   => []]

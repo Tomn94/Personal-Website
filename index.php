@@ -178,9 +178,9 @@
                     ?>
                       <a href="<?=$linkInfo[1]?>"><img class="linkIcon" src="img/icns/<?=$linkInfo[2]?>.png" alt="icon" />&nbsp;<?=$linkInfo[0]?>&nbsp;<span>›</span></a>
 <?php                   }
-                      echo '</div>';
+                      echo '                  </div>';
                     } while (!$isAssoc && $subProjNum < count($someProject)); ?>
-                  </td>
+</td>
 <?php             } ?>
               </tr>
           </table>
