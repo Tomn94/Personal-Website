@@ -190,11 +190,8 @@ header td, th {
 }
 
 .gitnote {
-    position: relative;
-    left: 44px;
-    top: 5px;
     font-size: 0.7em;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 

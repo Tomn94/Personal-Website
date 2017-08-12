@@ -67,7 +67,7 @@
                       last commit <span id="gh-commit-time">some time ago</span><br>
                       <span id="gh-contributions">Many</span> contributions this year<br>
                       
-                      <span class="gitnote">+ BitBucket</span>
+                      <span class="gitnote">+ BitBucket + GitLab</span>
                       
                       <div class="hiddenButtons" id="gitHubHiddenButtons">
                           <?=$HEADER_BUTTONS[1]."\n"?>
