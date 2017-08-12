@@ -49,7 +49,7 @@ function playVideo() {
 
     var embedded = document.createElement("iframe");
     embedded.id = "embedded-wwdc";
-    embedded.src = "https://www.youtube-nocookie.com/embed/w5SfOVPmK_U?rel=0&amp;showinfo=0&amp;autoplay=1";
+    embedded.src = "https://www.youtube-nocookie.com/embed/w5SfOVPmK_U?showinfo=0&amp;autoplay=1";
     embedded.setAttribute("frameborder", "0");
     embedded.setAttribute("allowfullscreen", "");
     embedded.style.float = (window.innerWidth > mobileWidth) ? "left" : "";
