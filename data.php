@@ -117,7 +117,7 @@ $PROJECTS =
     [
         ["title"   => "AqC TelCo",
          "id"      => "aqc",
-         "details" => "Team work to build a complete Embedded System for aquatic ecosystems automation.<br>Developed an Android app communicating with a Raspberry Pi.",
+         "details" => "Team work to build a complete Embedded System for aquatic ecosystems automation for a client company.<br>Developed an Android app communicating with a C server on a Raspberry Pi.",
          "date"    => "Spring 2016",
          "imgs"    => ["img/projects/telco.jpg"],
          "links"   => [["Worked in a team of 8, with Rémy Salim", "https://github.com/RemySphere", Icon::Team],
