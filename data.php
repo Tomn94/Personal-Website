@@ -78,13 +78,13 @@ $PROJECTS =
     [
         ["title"   => "Tramigo",
          "id"      => "tramigo",
-         "details" => "Know instantly when is your next tram/subway/bus: you can't be late.<br>&nbsp;<br>Tramigo shows you the schedule at the closest stop, in the city you are currently located. Also features lines, maps and timetables.<br>&nbsp;<br>Top app in Angers, France.",
+         "details" => "<em>New version 4 coming in Fall 2017!<br>Rewritten for iPhone, and now iPad &amp; Apple Watch.</em><br>&nbsp;<br>Know instantly when is your next tram/subway/bus: you can't be late.<br>&nbsp;<br>Tramigo shows you the schedule at the closest stops, in the city you are currently located. Also features lines, maps and timetables.<br>&nbsp;<br>Top app in Angers, France.",
          "date"    => "2014 – Now",
          "imgs"    => ["img/projects/tramigo.png"],
-         "links"   => [["Visit website", "http://tramigoapp.com"],
+         "links"   => [/*["Visit website", "https://tramigoapp.com"],*/
                        ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8"],
-                       ["Download on Google Play", "http://tramigoapp.com"],
-                       ["Download on the Windows Store", "http://tramigoapp.com"]]]
+                       ["Download on Google Play", "https://tramigoapp.com"],
+                       ["Download on the Windows Store", "https://tramigoapp.com"]]]
     ],
 
     [
@@ -93,8 +93,8 @@ $PROJECTS =
          "details" => "Swift Playgrounds Book introducing myself for Apple Worldwide Developers Conference 2017 Scholarship.<br>&nbsp;</br>Selected with 350 other students in the world, I was indeed invited to attend the week of conferences among 5,000 engineers and developers.<br>&nbsp;</br>The Playgrounds Book is interactive: you can play with the Swift code on the left, and experience the result on the right.",
          "date"    => "Spring 2017",
          "imgs"    => ["img/projects/wwdc.png"],
-         "links"   => [["View &amp; Download on GitHub", "https://github.com/Tomn94/WWDC-2017-Scholarship"],
-                       ["Watch the Video of my Trip", "https://youtu.be/SdwoDK-1kF0"],
+         "links"   => [["<strong>Watch the Video of my Trip!</strong>", "https://youtu.be/SdwoDK-1kF0"],
+                       ["View &amp; Download on GitHub", "https://github.com/Tomn94/WWDC-2017-Scholarship"],
                        ["Preview Book on YouTube", "https://youtu.be/w5SfOVPmK_U"],
                        ["What’s WWDC?", "https://wwdc.apple.com"]]]
     ],
@@ -160,7 +160,7 @@ $PROJECTS =
          "details" => "Provides an API for all the services in Students’ Union iOS and Android apps.<br>&nbsp;<br>Moreover, the Portal allows associations with their IDs to deliver news, notifications, to send to mailing lists, to edit API data based on level access, and to manage the meal/tickets-ordering systems.<br>&nbsp;<br>A TV with a Raspberry Pi is connected to the Portail to show orders in the kitchen.",
          "date"    => "2015 – Now",
          "imgs"    => ["img/projects/portail.png"],
-         "links"   => [["Visit website", "http://portail.eseomega.fr"],
+         "links"   => [["Visit website", "https://portail.bdeeseo.fr"],
                        ["View on GitHub", "https://github.com/Tomn94/Portail-Vie-Asso-ESEO"],
                        ["With Sonasi Katoa", "https://github.com/Snooze986"],
                        ["With François Leparoux", "https://github.com/rascafr"]]],
@@ -170,7 +170,7 @@ $PROJECTS =
          "details" => "System to sell/buy tickets (including online), and then scan to grant access on-site.<br>&nbsp;<br>Includes a website to manage data and check stats.<br>&nbsp;<br>Used to manage one event with 2,700 participants.<br>&nbsp;<br>Tied to BDE ESEO API and the Portal.",
          "date"    => "2016 – Now",
          "imgs"    => ["img/projects/digisheep.png", "img/projects/digisheep2.png"],
-         "links"   => [["Visit website", "http://portail.eseomega.fr"],
+         "links"   => [["Visit website", "https://portail.bdeeseo.fr"],
                        ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1084746837?pt=104224803&ct=Site%20perso&mt=8"],
                        ["View on GitHub", "https://github.com/Tomn94/DigiSheep"]]]
     ],
