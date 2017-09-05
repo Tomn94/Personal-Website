@@ -152,6 +152,16 @@ $PROJECTS =
     ],
 
     [
+        ["title"   => "Playlists Maker",
+         "id"      => "playlistsmaker",
+         "details" => "Quickly tidy your music library using Playlists Maker!<br>I had too many tracks in my library and I needed to order them, so I made an app.<br>&nbsp;<br>Select which songs you want to sort, then in which playlists these tracks can be added, and you’re ready.<br>Filter song selection by date, or select specific playlists or collections.<br>Provides music info, and a music player as well to help you decide in which playlist this song should be.<br>&nbsp;<br>Compatible with Apple Music.",
+         "date"    => "Summer 2017",
+         "imgs"    => ["img/projects/playlistsmaker1.png", "img/projects/playlistsmaker2.png"],
+         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1278103627?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+                       ["View on GitHub", "https://github.com/Tomn94/Playlists-Maker", Icon::Git]]]
+    ],
+
+    [
         ["title"   => "ESEOmega.fr",
          "id"      => "eseomega",
          "details" => "Dynamic website for my Students’ Union.<br>&nbsp;<br>Fetches data from the Students’ Union API.",

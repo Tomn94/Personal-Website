@@ -356,11 +356,6 @@ header td, th {
     padding: 20px 0;
 }
 
-#projects td.large p, #projects td.large a {
-    margin-left: 60%;
-    padding-left: 40px;
-}
-
 #projects td.large img, #projects td.large video {
     margin-bottom: 0;
     float: left;
