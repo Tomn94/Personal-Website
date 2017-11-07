@@ -93,13 +93,13 @@ $PROJECTS =
     [
         ["title"   => "Tramigo",
          "id"      => "tramigo",
-         "details" => "<em>New version 4 coming in Fall 2017!<br>Rewritten for iPhone, and now iPad &amp; Apple Watch.</em><br>&nbsp;<br>Know instantly when is your next tram/subway/bus: you can't be late.<br>&nbsp;<br>Tramigo shows you the schedule at the closest stops, in the city you are currently located. Also features lines, maps and timetables.<br>&nbsp;<br>Top app in Angers, France.",
+         "details" => "Know instantly when is your next tram/subway/bus: you can't be late.<br>&nbsp;<br>Tramigo shows you the schedule at the closest stops, in the city you are currently located. Also features lines, maps and timetables.<br>&nbsp;<br>Top app in Angers, France.",
          "date"    => "2014 – Now",
          "imgs"    => ["img/projects/tramigo.png"],
-         "links"   => [/*["Visit website", "https://tramigoapp.com"],*/
-                       ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
                        ["Download on Google Play", "https://tramigoapp.com", Icon::PlayStore],
-                       ["Download on the Windows Store", "https://tramigoapp.com", Icon::WindowsStore]]]
+                       ["Download on the Windows Store", "https://tramigoapp.com", Icon::WindowsStore],
+                       ["Visit website", "https://tramigoapp.com", Icon::Website]]]
     ],
 
     [
