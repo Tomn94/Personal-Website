@@ -115,6 +115,17 @@ $PROJECTS =
     ],
 
     [
+        ["title"   => "Design4Green 🥈",
+         "id"      => "d4g",
+         "details" => "Ranked 2<sup>nd</sup> at Design4Green International Challenge.<br>&nbsp;<br>The aim of this 48-hour non-stop eco-design competition was to create a web application allowing users to search a dentist among a database.<br>&nbsp;<br>We chose to develop our project from scratch, coding a back-end in C because of its low energy consumption, and a front-end mainly focused on UX.",
+         "date"    => "November 2017",
+         "imgs"    => ["img/projects/d4g.jpg"],
+         "links"   => [["With Sonasi Katoa", "https://github.com/Snooze986", Icon::Team],
+                       ["With François Leparoux", "https://github.com/rascafr", Icon::Team],
+                       ["Challenge Info", "http://design4green.org/en/", Icon::Question]]]
+    ],
+
+    [
         ["title"   => "AqC TelCo",
          "id"      => "aqc",
          "details" => "Team work to build a complete Embedded System for aquatic ecosystems automation for a client company.<br>Developed an Android app communicating with a C server on a Raspberry Pi.",
