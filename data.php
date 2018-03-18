@@ -1,6 +1,6 @@
 <?php
 
-$DATE_LAST_CHANGE = "August 2017";
+$DATE_LAST_CHANGE = "March 2018";
 
 $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
@@ -56,6 +56,7 @@ $SKILLS = [["iOS", 1, 30, true],
            ["Windows", 3, 11, true],
            ["C#", 3, 30, true],
            ["AppleScript", 3, 8, true],
+           ["LUA", 3, 20, true],
            ["Assembly", 3, 11, true],
            ["OpenGL", 3, 30, false],
            ["Maple", 3, 30, false],
