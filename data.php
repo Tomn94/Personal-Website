@@ -127,6 +127,19 @@ $PROJECTS =
     ],
 
     [
+        ["title"   => "Graduation Project",
+         "id"      => "asls",
+         "details" => "During large events (pyrotechnic shows, concerts, festivals…) a lot of time and effort is put into the synchronization of music, lighting, pyrotechnics, and video-projection.<br>The project is an easy to use, autonomous, wireless, and customizable solution.<br>The master case allows the technician to view, test, play &amp; control the show thanks to the screen and keyboard.",
+         "date"    => "Winter 2017",
+         "imgs"    => ["img/projects/asls.jpg"],
+         "links"   => [["With Timé Kadel", "https://github.com/MIDMX", Icon::Team],
+                       ["With François Leparoux", "https://github.com/rascafr", Icon::Team],
+                       ["With Sonasi Katoa", "https://github.com/Snooze986", Icon::Team],
+                       ["With Lucas Amiaud", "https://github.com/mirage10895", Icon::Team],
+                       ["Timé's Startup Website (coming soon)", "#asls", Icon::Team]]]
+    ],
+
+    [
         ["title"   => "AqC TelCo",
          "id"      => "aqc",
          "details" => "Team work to build a complete Embedded System for aquatic ecosystems automation for a client company.<br>Developed an Android app communicating with a C server on a Raspberry Pi.",
