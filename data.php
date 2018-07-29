@@ -8,7 +8,7 @@ $DESCRIPTION = "French Student Engineer+Manager\nPolyglot Developer, Designer…
 
 $BASE_URL = "https://tomn.fr";
 
-$HEADER_TABLE_HEADERS = ["last song I've listened to", "GitHub activity", "countries I've lived in/visited"];
+$HEADER_TABLE_HEADERS = ["last song I've listened to", "public git activity", "countries I've lived in/visited"];
 
 $HEADER_BUTTONS = ['<a class="button" href="https://twitter.com/tomn94">Twitter</a>', '<a class="button" href="https://github.com/Tomn94">GitHub</a>'];
 

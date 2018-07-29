@@ -63,11 +63,11 @@
                       </div>
                   </td>
                   <td data-th="<?=$HEADER_TABLE_HEADERS[1]?>">
-                      <span id="gh-repos">14+</span> repositories<br>
+                      <span id="gh-repos">24+</span> repositories<br>
                       last commit <span id="gh-commit-time">some time ago</span><br>
                       <span id="gh-contributions">Many</span> contributions this year<br>
                       
-                      <span class="gitnote">+ BitBucket + GitLab</span>
+                      <span class="gitnote">+ private repositories</span>
                       
                       <div class="hiddenButtons" id="gitHubHiddenButtons">
                           <?=$HEADER_BUTTONS[1]."\n"?>
