@@ -2,9 +2,9 @@
 
 $DATE_LAST_CHANGE = "July 2018";
 
-$PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
+$PAGE_TITLE = "Thomas Naudet — Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
-$DESCRIPTION = "French Student Engineer+Manager\nPolyglot Developer, Designer…";
+$DESCRIPTION = "French Engineer+Manager\nPolyglot Developer, Designer…";
 
 $BASE_URL = "https://tomn.fr";
 
