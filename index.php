@@ -125,10 +125,10 @@
                     
                     // If it's not an array, just a standard project
                     $isAssoc = $someProject !== array() && array_keys($someProject) !== range(0, count($someProject) - 1);
+                    $subProjNum = 0;
                     if ($isAssoc) {
                       $project = $someProject;
                     } else {
-                      $subProjNum = 0;
                       $project = $someProject[$subProjNum];
                     }
 
