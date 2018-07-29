@@ -165,7 +165,8 @@
                       <img src="<?=$img?>" id="<?=$project["id"]?>" title="<?php
                         echo $project["title"];
                         if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;';
-                        if ($project["title"] == 'DigiSheep') echo '" style="max-width: 36%;';
+                        else if ($project["title"] == 'DigiSheep') echo '" style="max-width: 36%;';
+                        else if ($project["title"] == 'Thales') echo '" style="float: left; box-shadow: none; height: 110px; max-width: 110px; ';
                         ?>" /><?php
                           }
                        } ?>
@@ -217,7 +218,7 @@
       </nav>
       
       <footer class="letterpress">&copy; <?=$DATE_LAST_CHANGE?><br>
-          Everything here is home-made except the fonts
+          Everything here is home-made except fonts &amp; logos
       </footer>
       
       <?php include_once("analytics.php") ?>

@@ -1,6 +1,6 @@
 <?php
 
-$DATE_LAST_CHANGE = "March 2018";
+$DATE_LAST_CHANGE = "July 2018";
 
 $PAGE_TITLE = "Thomas Naudet — Student Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
@@ -92,12 +92,22 @@ abstract class Icon
 $PROJECTS =
 [
     [
+        ["title"   => "Thales",
+         "id"      => "thales",
+         "details" => "Internship &middot; Developer &middot; Embedded software on airplanes",
+         "date"    => "1<sup>st</sup> half 2018",
+         "imgs"    => ["img/projects/thales.png"],
+         "links"   => []]
+    ],
+
+    [
         ["title"   => "Tramigo",
          "id"      => "tramigo",
-         "details" => "Know instantly when is your next tram/subway/bus: you can't be late.<br>&nbsp;<br>Tramigo shows you the schedule at the closest stops, in the city you are currently located. Also features lines, maps and timetables.<br>&nbsp;<br>Top app in Angers, France.",
-         "date"    => "2014 – Now",
+         "details" => "Know instantly when is your next tram/subway/bus: you can't be late. <em>Top app in Angers, France.</em><br>&nbsp;<br>Tramigo shows you the schedule at the closest stops, in the city you are currently located. Also features lines, maps and timetables.",
+         "date"    => "2014 – 2018",
          "imgs"    => ["img/projects/tramigo.png"],
-         "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
+         "links"   => [["With Euryale Ambroise", "http://www.eurkainis.fr", Icon::Team],
+                       ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
                        ["Download on Google Play", "https://tramigoapp.com", Icon::PlayStore],
                        ["Download on the Windows Store", "https://tramigoapp.com", Icon::WindowsStore],
                        ["Visit website", "https://tramigoapp.com", Icon::Website]]]
@@ -161,7 +171,7 @@ $PROJECTS =
          "id"      => "subtlesubtitles",
          "details" => "Subtitle player for movies and TV series:<br>Find, Play, Collect and Share!<br>&nbsp;<br>Thousands of downloads all around the world.",
          "imgs"    => ["img/projects/subtlesubs.png"],
-         "date"    => "2016 – Now",
+         "date"    => "2016 – 2018",
          "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1099663304?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
                        ["View on GitHub", "https://github.com/Tomn94/Subtle-Subtitles", Icon::Git]]]
     ],
@@ -170,7 +180,7 @@ $PROJECTS =
         ["title"   => "Students’ Union app",
          "id"      => "bdeeseo",
          "details" => "Complete iOS app dedicated to students at my Engineering School<br>&nbsp;<br>Gathers news, events, notifications, associations information &amp; contacts, deals, floor plans, file access, games…<br>Includes also a meal-ordering service and a store to buy tickets for events.<br>The app even accepts credit cards.",
-         "date"    => "2015 – Now",
+         "date"    => "2015 – 2018",
          "imgs"    => ["img/projects/bdeeseo.png"],
          "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id966385182?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
                        ["View on GitHub", "https://github.com/Tomn94/BDE-ESEO", Icon::Git]]]
@@ -208,7 +218,7 @@ $PROJECTS =
         ["title"   => "Associations’ Portal",
          "id"      => "portal",
          "details" => "Provides an API for all the services in Students’ Union iOS and Android apps.<br>&nbsp;<br>Moreover, the Portal allows associations with their IDs to deliver news, notifications, to send to mailing lists, to edit API data based on level access, and to manage the meal/tickets-ordering systems.<br>&nbsp;<br>A TV with a Raspberry Pi is connected to the Portail to show orders in the kitchen.",
-         "date"    => "2015 – Now",
+         "date"    => "2015 – 2018",
          "imgs"    => ["img/projects/portail.png"],
          "links"   => [["Visit website", "https://portail.bdeeseo.fr", Icon::Website],
                        ["View on GitHub", "https://github.com/Tomn94/Portail-Vie-Asso-ESEO", Icon::Git],
@@ -218,7 +228,7 @@ $PROJECTS =
         ["title"   => "DigiSheep",
          "id"      => "digisheep",
          "details" => "System to sell/buy tickets (including online), and then scan to grant access on-site.<br>&nbsp;<br>Includes a website to manage data and check stats.<br>&nbsp;<br>Used to manage one event with 2,700 participants.<br>&nbsp;<br>Tied to BDE ESEO API and the Portal.",
-         "date"    => "2016 – Now",
+         "date"    => "2016 – 2018",
          "imgs"    => ["img/projects/digisheep.png", "img/projects/digisheep2.png"],
          "links"   => [["Visit website", "https://portail.bdeeseo.fr", Icon::Website],
                        ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1084746837?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
@@ -264,7 +274,7 @@ $PROJECTS =
         ["title"   => "Music Tweet",
          "id"      => "musictweet",
          "details" => "Simple app for iOS & watchOS to share on Twitter the music being played by any app, including the artist and the album artwork.<br>&nbsp;<br>My very first app for iPhone, and now my first app for Apple Watch.<br>&nbsp;",
-         "date"    => "2013 – Now",
+         "date"    => "2013 – 2018",
          "imgs"    => ["img/projects/musictweet.png"],
          "links"   => [["Download on the App Store", "https://itunes.apple.com/app/apple-store/id919336842?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
                        ["View on GitHub", "https://github.com/Tomn94/Music-Tweet", Icon::Git]],
@@ -294,14 +304,15 @@ $PROJECTS =
          "details" => "Encrypt &amp; decrypt your files and texts with secure algorithms, in an innovative way thanks to plug-ins.<br>∞Crypt Files &amp; ∞Crypt Text are cross-platform desktop apps.",
          "date"    => "2011 – 2013",
          "imgs"    => ["img/projects/infinicryptfiles.png", "img/projects/infinicrypttext.png"],
-         "links"   => []],
+         "links"   => [["With Euryale Ambroise", "http://www.eurkainis.fr", Icon::Team],
+                       ["With Nicolas Doudeau", "", Icon::Team]]],
 
         ["title"   => "Tunnel Runners",
          "id"      => "tunnelrunners",
          "details" => "Multiplayer high-speed races and fights between vehicles in a tunnel.<br>Create your own tracks &amp; play with your friends.",
          "date"    => "2011",
          "imgs"    => ["img/projects/tunnelrunners.png"],
-         "links"   => [],
+         "links"   => [["With Nicolas Doudeau", "", Icon::Team]],
          "inline"  => true],
 
         ["title"   => "Mario",
@@ -332,10 +343,11 @@ $PROJECTS =
 
         ["title"   => "DevCrew",
          "id"      => "devcrew",
-         "details" => "Website for a team of developers I was a member.",
+         "details" => "Website for a team of developers.",
          "date"    => "2011",
          "imgs"    => ["img/projects/devcrew.jpg"],
-         "links"   => [],
+         "links"   => [["With Euryale Ambroise", "http://www.eurkainis.fr", Icon::Team],
+                       ["With Nicolas Doudeau", "", Icon::Team]],
          "inline"  => true],
 
         [
