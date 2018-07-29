@@ -187,6 +187,11 @@ header td, th {
 .flags {
     font-size: 1.8em;
     line-height: 30px;
+    white-space: nowrap;
+}
+
+.flags .highlighted {
+    text-shadow: 0 0 10px white;
 }
 
 .gitnote {

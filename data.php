@@ -12,7 +12,7 @@ $HEADER_TABLE_HEADERS = ["last song I've listened to", "GitHub activity", "count
 
 $HEADER_BUTTONS = ['<a class="button" href="https://twitter.com/tomn94">Twitter</a>', '<a class="button" href="https://github.com/Tomn94">GitHub</a>'];
 
-$COUNTRIES = "🇫🇷🇭🇰🇬🇧🇮🇪🇩🇪🇺🇸🇨🇳\n🇯🇵🇧🇪🇮🇹🇨🇿🇱🇺🇬🇷🇪🇸\n🇲🇦🇻🇳🇲🇲🇵🇭🇹🇭🇲🇴🇰🇭";
+$COUNTRIES = "<span class='highlighted'>🇫🇷🇮🇪🇺🇸</span>🇭🇰🇬🇧🇩🇪🇨🇳\n🇧🇪🇮🇹🇯🇵🇨🇿🇬🇷🇪🇸🇱🇺\n🇲🇦🇻🇳🇲🇲🇵🇭🇹🇭🇰🇭🇲🇴";
 
 $NBR_PAINTINGS = [];
 if (file_exists('img/paintings/'))
