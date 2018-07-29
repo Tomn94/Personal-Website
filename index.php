@@ -166,7 +166,8 @@
                         echo $project["title"];
                         if ($project["title"] == 'DelDots') echo '" style="border-radius: 15px;';
                         else if ($project["title"] == 'DigiSheep') echo '" style="max-width: 36%;';
-                        else if ($project["title"] == 'Thales') echo '" style="float: left; box-shadow: none; height: 110px; max-width: 110px; ';
+                        else if ($project["title"] == 'Thales' ||
+                                 $project["title"] == 'Apple') echo '" style="float: left; box-shadow: none; height: 110px; max-width: 110px; ';
                         ?>" /><?php
                           }
                        } ?>

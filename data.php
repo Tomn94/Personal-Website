@@ -92,6 +92,15 @@ abstract class Icon
 $PROJECTS =
 [
     [
+        ["title"   => "Apple",
+         "id"      => "apple",
+         "details" => "Software Engineer &middot; Internationalization",
+         "date"    => "August 2018 – Now",
+         "imgs"    => ["img/projects/apple.png"],
+         "links"   => []]
+    ],
+
+    [
         ["title"   => "Thales",
          "id"      => "thales",
          "details" => "Internship &middot; Developer &middot; Embedded software on airplanes",
