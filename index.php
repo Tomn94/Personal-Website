@@ -221,8 +221,5 @@
       <footer class="letterpress">&copy; <?=$DATE_LAST_CHANGE?><br>
           Everything here is home-made except fonts &amp; logos
       </footer>
-      
-      <?php include_once("analytics.php") ?>
-
   </body>
 </html>

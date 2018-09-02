@@ -49,8 +49,5 @@
           </p>
           <p><a href="<?=$BASE_URL?>"><span>‹</span>&nbsp;Go back on my website</a></p>
       </div>
-      
-      <?php include_once("analytics.php") ?>
-
   </body>
 </html>
