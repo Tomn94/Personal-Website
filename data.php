@@ -1,6 +1,6 @@
 <?php
 
-$DATE_LAST_CHANGE = "July 2018";
+$DATE_LAST_CHANGE = "January 2020";
 
 $PAGE_TITLE = "Thomas Naudet — Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
@@ -12,7 +12,7 @@ $HEADER_TABLE_HEADERS = ["last song I've listened to", "public git activity", "c
 
 $HEADER_BUTTONS = ['<a class="button" href="https://twitter.com/tomn94">Twitter</a>', '<a class="button" href="https://github.com/Tomn94">GitHub</a>'];
 
-$COUNTRIES = "<span class='highlighted'>🇫🇷🇺🇸🇮🇪</span>🇭🇰🇬🇧🇩🇪🇨🇳\n🇧🇪🇮🇹🇲🇽🇯🇵🇨🇿🇬🇷🇪🇸🇱🇺\n🇲🇦🇻🇳🇲🇲🇵🇭🇹🇭🇰🇭🇲🇴";
+$COUNTRIES = "<span class='highlighted'>🇺🇸🇫🇷🇮🇪</span>🇭🇰🇬🇧🇩🇪🇨🇳\n🇧🇪🇮🇹🇲🇽🇯🇵🇨🇿🇬🇷🇪🇸🇱🇺\n🇲🇦🇻🇳🇲🇲🇵🇭🇹🇭🇰🇭🇲🇴";
 
 $NBR_PAINTINGS = [];
 if (file_exists('img/paintings/'))
