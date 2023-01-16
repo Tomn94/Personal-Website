@@ -115,7 +115,7 @@ $PROJECTS =
          "details" => "Know instantly when is your next tram/subway/bus: you can't be late. <em>Top app in Angers, France.</em><br>&nbsp;<br>Tramigo shows you the schedule at the closest stops, in the city you are currently located. Also features lines, maps and timetables.",
          "date"    => "2014 – 2018",
          "imgs"    => ["img/projects/tramigo.png"],
-         "links"   => [["With Euryale Ambroise", "http://www.eurkainis.fr", Icon::Team],
+         "links"   => [["With Euryale Ambroise", "https://eurkainis.fr", Icon::Team],
                        ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
                        ["Download on Google Play", "https://tramigoapp.com", Icon::PlayStore],
                        ["Download on the Windows Store", "https://tramigoapp.com", Icon::WindowsStore],
@@ -313,7 +313,7 @@ $PROJECTS =
          "details" => "Encrypt &amp; decrypt your files and texts with secure algorithms, in an innovative way thanks to plug-ins.<br>∞Crypt Files &amp; ∞Crypt Text are cross-platform desktop apps.",
          "date"    => "2011 – 2013",
          "imgs"    => ["img/projects/infinicryptfiles.png", "img/projects/infinicrypttext.png"],
-         "links"   => [["With Euryale Ambroise", "http://www.eurkainis.fr", Icon::Team],
+         "links"   => [["With Euryale Ambroise", "https://eurkainis.fr", Icon::Team],
                        ["With Nicolas Doudeau", "", Icon::Team]]],
 
         ["title"   => "Tunnel Runners",
@@ -355,7 +355,7 @@ $PROJECTS =
          "details" => "Website for a team of developers.",
          "date"    => "2011",
          "imgs"    => ["img/projects/devcrew.jpg"],
-         "links"   => [["With Euryale Ambroise", "http://www.eurkainis.fr", Icon::Team],
+         "links"   => [["With Euryale Ambroise", "https://eurkainis.fr", Icon::Team],
                        ["With Nicolas Doudeau", "", Icon::Team]],
          "inline"  => true],
 
