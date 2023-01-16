@@ -1,6 +1,6 @@
 <?php
 
-$DATE_LAST_CHANGE = "November 2022";
+$DATE_LAST_CHANGE = "January 2023";
 
 $PAGE_TITLE = "Thomas Naudet — Engineer+Manager";
 $PAGE_TITLE_SHORT = "Thomas Naudet";
@@ -10,7 +10,7 @@ $BASE_URL = "https://tomn.fr";
 
 $HEADER_TABLE_HEADERS = ["last song I've listened to", "public git activity", "countries I've lived in/visited"];
 
-$HEADER_BUTTONS = ['<a class="button" href="https://twitter.com/tomn94">Twitter</a>', '<a class="button" href="https://github.com/Tomn94">GitHub</a>'];
+$HEADER_BUTTONS = ['<a class="button" rel="me" href="https://mastodon.social/@tomn94">Mastodon</a>', '<a class="button" href="https://github.com/Tomn94">GitHub</a>'];
 
 $COUNTRIES = "<span class='highlighted'>🇺🇸🇫🇷🇮🇪</span>🇭🇰🇬🇧🇩🇪🇨🇳\n🇧🇪🇮🇹🇲🇽🇯🇵🇨🇿🇬🇷🇪🇸🇱🇺\n🇲🇦🇻🇳🇲🇲🇰🇷🇵🇭🇹🇭🇰🇭🇲🇴";
 
