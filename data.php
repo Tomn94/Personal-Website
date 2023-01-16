@@ -151,11 +151,11 @@ $PROJECTS =
          "details" => "During large events (pyrotechnic shows, concerts, festivals…) a lot of time and effort is put into the synchronization of music, lighting, pyrotechnics, and video-projection.<br>The project is an easy to use, autonomous, wireless, and customizable solution.<br>The master case allows the technician to view, test, play &amp; control the show thanks to the screen and keyboard.",
          "date"    => "Winter 2017",
          "imgs"    => ["img/projects/asls.jpg"],
-         "links"   => [["With Timé Kadel", "https://timekadel.com", Icon::Team],
+         "links"   => [["Timé’s ASLS Startup", "https://timekadel.com/asls", Icon::Website],
+                       ["With Timé Kadel", "https://timekadel.com", Icon::Team],
                        ["With François Leparoux", "https://github.com/rascafr", Icon::Team],
                        ["With Sonasi Katoa", "https://sonasi.fr", Icon::Team],
-                       ["With Lucas Amiaud", "https://github.com/mirage10895", Icon::Team],
-                       ["Timé’s ASLS Startup", "https://timekadel.com/asls", Icon::Website]]]
+                       ["With Lucas Amiaud", "https://github.com/mirage10895", Icon::Team]]]
     ],
 
     [
