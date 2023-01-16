@@ -140,7 +140,7 @@ $PROJECTS =
          "details" => "Ranked 2<sup>nd</sup> at Design4Green International Challenge.<br>&nbsp;<br>The aim of this 48-hour non-stop eco-design competition was to create a web application allowing users to search a dentist among a database.<br>&nbsp;<br>We chose to develop our project from scratch, coding a back-end in C because of its low energy consumption, and a front-end mainly focused on UX.",
          "date"    => "November 2017",
          "imgs"    => ["img/projects/d4g.jpg"],
-         "links"   => [["With Sonasi Katoa", "https://github.com/Snooze986", Icon::Team],
+         "links"   => [["With Sonasi Katoa", "https://sonasi.fr", Icon::Team],
                        ["With François Leparoux", "https://github.com/rascafr", Icon::Team],
                        ["Challenge Info", "http://design4green.org/en/", Icon::Question]]]
     ],
@@ -151,11 +151,11 @@ $PROJECTS =
          "details" => "During large events (pyrotechnic shows, concerts, festivals…) a lot of time and effort is put into the synchronization of music, lighting, pyrotechnics, and video-projection.<br>The project is an easy to use, autonomous, wireless, and customizable solution.<br>The master case allows the technician to view, test, play &amp; control the show thanks to the screen and keyboard.",
          "date"    => "Winter 2017",
          "imgs"    => ["img/projects/asls.jpg"],
-         "links"   => [["With Timé Kadel", "https://github.com/MIDMX", Icon::Team],
+         "links"   => [["With Timé Kadel", "https://timekadel.com", Icon::Team],
                        ["With François Leparoux", "https://github.com/rascafr", Icon::Team],
-                       ["With Sonasi Katoa", "https://github.com/Snooze986", Icon::Team],
+                       ["With Sonasi Katoa", "https://sonasi.fr", Icon::Team],
                        ["With Lucas Amiaud", "https://github.com/mirage10895", Icon::Team],
-                       ["Timé's Startup Website", "https://asls.tk", Icon::Website]]]
+                       ["Timé’s ASLS Startup", "https://timekadel.com/asls", Icon::Website]]]
     ],
 
     [
@@ -220,7 +220,7 @@ $PROJECTS =
          "date"    => "Winter 2016",
          "imgs"    => ["img/projects/bluemoon.mp4"],
          "links"   => [["Visit website", "http://bluemoon.eseomega.fr", Icon::Website],
-                       ["With Sonasi Katoa", "https://github.com/Snooze986", Icon::Team]]]
+                       ["With Sonasi Katoa", "https://sonasi.fr", Icon::Team]]]
     ],
 
     [
@@ -231,7 +231,7 @@ $PROJECTS =
          "imgs"    => ["img/projects/portail.png"],
          "links"   => [["Visit website", "https://portail.bdeeseo.fr", Icon::Website],
                        ["View on GitHub", "https://github.com/Tomn94/Portail-Vie-Asso-ESEO", Icon::Git],
-                       ["With Sonasi Katoa", "https://github.com/Snooze986", Icon::Team],
+                       ["With Sonasi Katoa", "https://sonasi.fr", Icon::Team],
                        ["With François Leparoux", "https://github.com/rascafr", Icon::Team]]],
 
         ["title"   => "DigiSheep",
