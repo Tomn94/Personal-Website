@@ -97,7 +97,7 @@ $PROJECTS =
          "details" => "Software Engineer &middot; Internationalization",
          "date"    => "August 2018 – Now",
          "imgs"    => ["img/projects/apple.png"],
-         "links"   => ["WWDC’21 Talk", "https://developer.apple.com/wwdc21/10221", Icon::AppStore]]
+         "links"   => [["WWDC’21 Talk", "https://developer.apple.com/wwdc21/10221", Icon::Video]]]
     ],
 
     [
@@ -119,7 +119,7 @@ $PROJECTS =
                        ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id913767394?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
                        ["Download on Google Play", "https://tramigoapp.com", Icon::PlayStore],
                        ["Download on the Windows Store", "https://tramigoapp.com", Icon::WindowsStore],
-                       ["Visit website", "https://tramigoapp.com", Icon::Website]]]
+                       ["Visit Website", "https://tramigoapp.com", Icon::Website]]]
     ],
 
     [
@@ -128,7 +128,7 @@ $PROJECTS =
          "details" => "Swift Playgrounds Book introducing myself for Apple Worldwide Developers Conference 2017 Scholarship.<br>&nbsp;</br>Selected with 350 other students in the world, I was indeed invited to attend the week of conferences among 5,000 engineers and developers.<br>&nbsp;</br>The Playgrounds Book is interactive: you can play with the Swift code on the left, and experience the result on the right.",
          "date"    => "Spring 2017",
          "imgs"    => ["img/projects/wwdc.png"],
-         "links"   => [["<strong>Watch the Video of my Trip!</strong>", "https://youtu.be/SdwoDK-1kF0", Icon::Video],
+         "links"   => [["Watch the Video of my Trip", "https://youtu.be/SdwoDK-1kF0", Icon::Video],
                        ["View &amp; Download on GitHub", "https://github.com/Tomn94/WWDC-2017-Scholarship", Icon::Git],
                        ["Preview Book on YouTube", "https://youtu.be/w5SfOVPmK_U", Icon::Book],
                        ["What’s WWDC?", "https://wwdc.apple.com", Icon::Question]]]
@@ -211,7 +211,7 @@ $PROJECTS =
          "details" => "Dynamic website for my Students’ Union.<br>&nbsp;<br>Fetches data from the Students’ Union API.",
          "date"    => "Fall 2015",
          "imgs"    => ["img/projects/eseomega.png"],
-         "links"   => [["Visit website", "http://eseomega.fr", Icon::Website],
+         "links"   => [["Visit Website", "http://eseomega.fr", Icon::Website],
                        ["With Alexis Louis", "https://github.com/wimacod", Icon::Team]]],
 
         ["title"   => "Blue Moon",
@@ -219,7 +219,7 @@ $PROJECTS =
          "details" => "Website to promote and sell tickets for our event welcoming 2,700 students.<br>Featured Kavinsky, Jay Style, Natty Rico, and Dustycloud.",
          "date"    => "Winter 2016",
          "imgs"    => ["img/projects/bluemoon.mp4"],
-         "links"   => [["Visit website", "http://bluemoon.eseomega.fr", Icon::Website],
+         "links"   => [["Visit Website", "http://bluemoon.eseomega.fr", Icon::Website],
                        ["With Sonasi Katoa", "https://sonasi.fr", Icon::Team]]]
     ],
 
@@ -229,7 +229,7 @@ $PROJECTS =
          "details" => "Provides an API for all the services in Students’ Union iOS and Android apps.<br>&nbsp;<br>Moreover, the Portal allows associations with their IDs to deliver news, notifications, to send to mailing lists, to edit API data based on level access, and to manage the meal/tickets-ordering systems.<br>&nbsp;<br>A TV with a Raspberry Pi is connected to the Portail to show orders in the kitchen.",
          "date"    => "2015 – 2018",
          "imgs"    => ["img/projects/portail.png"],
-         "links"   => [["Visit website", "https://portail.bdeeseo.fr", Icon::Website],
+         "links"   => [["Visit Website", "https://portail.bdeeseo.fr", Icon::Website],
                        ["View on GitHub", "https://github.com/Tomn94/Portail-Vie-Asso-ESEO", Icon::Git],
                        ["With Sonasi Katoa", "https://sonasi.fr", Icon::Team],
                        ["With François Leparoux", "https://github.com/rascafr", Icon::Team]]],
@@ -239,7 +239,7 @@ $PROJECTS =
          "details" => "System to sell/buy tickets (including online), and then scan to grant access on-site.<br>&nbsp;<br>Includes a website to manage data and check stats.<br>&nbsp;<br>Used to manage one event with 2,700 participants.<br>&nbsp;<br>Tied to BDE ESEO API and the Portal.",
          "date"    => "2016 – 2018",
          "imgs"    => ["img/projects/digisheep.png", "img/projects/digisheep2.png"],
-         "links"   => [["Visit website", "https://portail.bdeeseo.fr", Icon::Website],
+         "links"   => [["Visit Website", "https://portail.bdeeseo.fr", Icon::Website],
                        ["Download on the App Store", "https://itunes.apple.com/app/apple-store/id1084746837?pt=104224803&ct=Site%20perso&mt=8", Icon::AppStore],
                        ["View on GitHub", "https://github.com/Tomn94/DigiSheep", Icon::Git]]]
     ],
